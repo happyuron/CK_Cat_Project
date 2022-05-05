@@ -157,9 +157,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -184,7 +184,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.1547781
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &68619765
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -204,7 +204,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.18799745
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &68619766
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -224,7 +224,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.12983309
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &68619767
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -290,9 +290,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -317,7 +317,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.0365528
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &114548503
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -337,7 +337,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13781755
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &114548504
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -357,7 +357,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.0964256
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &114548505
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -423,9 +423,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -450,7 +450,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.96388656
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &153093776
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13552313
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &153093777
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13781755
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &153093778
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -556,9 +556,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -583,7 +583,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.96388656
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &249664588
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.111364335
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &249664589
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13889362
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &249664590
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -689,9 +689,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -716,7 +716,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.9734952
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &294867909
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -736,7 +736,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11593207
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &294867910
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -756,7 +756,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13552313
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &294867911
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -822,9 +822,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -849,7 +849,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.0365528
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &302960335
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -869,7 +869,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13889362
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &302960336
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -889,7 +889,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11938109
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &302960337
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -955,9 +955,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -982,7 +982,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.97871625
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &311269796
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1002,7 +1002,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11251195
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &311269797
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1022,7 +1022,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.10461121
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &311269798
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1088,9 +1088,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1115,7 +1115,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.3513981
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &514887820
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1135,7 +1135,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.21066888
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &514887821
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1155,7 +1155,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.15384936
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &514887822
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1305,9 +1305,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1332,7 +1332,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.0219179
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &590315539
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1352,7 +1352,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.10461121
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &590315540
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1372,7 +1372,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.104680374
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &590315541
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1438,9 +1438,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1465,7 +1465,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.0303025
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &646414808
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1485,7 +1485,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.12575984
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &646414809
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1505,7 +1505,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11119863
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &646414810
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1537,6 +1537,50 @@ Transform:
   m_Father: {fileID: 1923872676}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &867969403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867969404}
+  - component: {fileID: 867969405}
+  m_Layer: 0
+  m_Name: PlayerStateManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &867969404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867969403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1431651279}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867969405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867969403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aeb3b6d4f88885428331260c6029c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &956397604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,9 +1615,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1598,7 +1642,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.0219179
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &956397607
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1618,7 +1662,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13204676
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &956397608
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1638,7 +1682,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11372906
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &956397609
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1815,9 +1859,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1842,7 +1886,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.1233175
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1109840438
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1862,7 +1906,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11372906
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1109840439
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1882,7 +1926,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.21066888
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1109840440
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1948,9 +1992,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1975,7 +2019,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.1233175
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1174610537
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1995,7 +2039,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.104680374
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1174610538
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2015,7 +2059,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.19181329
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1174610539
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2081,9 +2125,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2108,7 +2152,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.97871625
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1296208512
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2128,7 +2172,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11397789
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1296208513
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2148,7 +2192,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13204676
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1296208514
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2214,9 +2258,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2241,7 +2285,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.9605929
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1300079843
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2261,7 +2305,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.123972245
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1300079844
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2281,7 +2325,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11251195
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1300079845
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2340,7 +2384,8 @@ Transform:
   m_LocalPosition: {x: -0.19747558, y: -0.8213541, z: 0.041542925}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 867969404}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2378,9 +2423,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2405,7 +2450,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.0303025
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1480148024
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2425,7 +2470,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.12983309
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1480148025
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2445,7 +2490,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.123972245
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1480148026
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2511,9 +2556,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2538,7 +2583,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.1353185
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1516819314
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2558,7 +2603,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11938109
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1516819315
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2578,7 +2623,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.15946329
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1516819316
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2644,9 +2689,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2671,7 +2716,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.3270488
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1615862256
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2691,7 +2736,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.17804873
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1615862257
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2711,7 +2756,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.18799745
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1615862258
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2777,9 +2822,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2804,7 +2849,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.1353185
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1714175312
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2824,7 +2869,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.0964256
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1714175313
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2844,7 +2889,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.17804873
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1714175314
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2910,9 +2955,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2937,7 +2982,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.3270488
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1821313245
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2957,7 +3002,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.15946329
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1821313246
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2977,7 +3022,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13752818
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1821313247
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3022,6 +3067,7 @@ GameObject:
   - component: {fileID: 1858231546}
   - component: {fileID: 1858231548}
   - component: {fileID: 1858231547}
+  - component: {fileID: 1858231549}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -3146,7 +3192,19 @@ MonoBehaviour:
     m_ActionId: 7e454e32-d5aa-4b16-bbe9-0bb8a55a22f8
     m_ActionName: Cat/Move[/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1858231549}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ChangeState
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0354629e-7af1-4694-a020-bf93d8620b50
     m_ActionName: Cat/Switch State[/Keyboard/leftShift]
   m_NeverAutoSwitchControlSchemes: 0
@@ -3154,6 +3212,18 @@ MonoBehaviour:
   m_DefaultActionMap: Cat
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1858231549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858231542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946863ebd4f222d43b03281b0befb6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1923872675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3314,7 +3384,7 @@ MonoBehaviour:
     m_Extent: {x: 0.5, y: 0.5, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
-  m_AutoRebind: 0
+  m_AutoRebind: 1
 --- !u!1 &1972344722
 GameObject:
   m_ObjectHideFlags: 0
@@ -3349,9 +3419,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3376,7 +3446,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.9734952
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1972344725
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3396,7 +3466,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.1310351
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1972344726
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3416,7 +3486,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.111364335
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1972344727
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3482,9 +3552,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3509,7 +3579,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.1566614
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1976902650
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3529,7 +3599,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.15384936
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1976902651
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3549,7 +3619,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.12513584
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1976902652
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3636,7 +3706,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.1547781
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1982340902
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3656,7 +3726,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.13752818
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &1982340903
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3676,7 +3746,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.12575984
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &1982340904
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3706,9 +3776,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3748,9 +3818,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3775,7 +3845,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.0303632
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2009994937
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3795,7 +3865,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.124396674
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2009994938
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3815,7 +3885,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.1310351
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &2009994939
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3881,9 +3951,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3908,7 +3978,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.3513981
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2073287496
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3928,7 +3998,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.19181329
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2073287497
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -3948,7 +4018,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.16892396
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &2073287498
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4014,9 +4084,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4041,7 +4111,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.1566614
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2087651803
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4061,7 +4131,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.16892396
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2087651804
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4081,7 +4151,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.124396674
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &2087651805
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4147,9 +4217,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4174,7 +4244,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 1.0303632
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2127786671
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4194,7 +4264,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.12513584
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2127786672
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4214,7 +4284,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11593207
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &2127786673
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4280,9 +4350,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.8
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4307,7 +4377,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.9605929
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2131703094
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4327,7 +4397,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11119863
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!231 &2131703095
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4347,7 +4417,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 1
   m_Distance: 0.11397789
   m_DampingRatio: 0.3
-  m_Frequency: 5
+  m_Frequency: 10
 --- !u!58 &2131703096
 CircleCollider2D:
   m_ObjectHideFlags: 0

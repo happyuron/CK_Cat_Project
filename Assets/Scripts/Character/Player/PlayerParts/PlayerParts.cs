@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class PlayerParts<T> : CharacterParts<T> where T : CharacterParts<T>
 {
-    // Start is called before the first frame update
-    void Start()
+    Player player;
+
+    protected override void Awake()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        base.Awake();
+        player = GetComponent<Player>();
     }
 }
