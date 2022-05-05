@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class PlayerMove : MonoBehaviour
+public class PlayerMove : PlayerParts<PlayerMove>
 {
     private Rigidbody2D rigid;
-    private Transform tr;
     private Vector2 dir;
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-        tr = GetComponent<Transform>();
+        Tr = GetComponent<Transform>();
     }
     public void MoveRight(InputAction.CallbackContext ctx)
     {
@@ -19,7 +18,7 @@ public class PlayerMove : MonoBehaviour
 
     private void LateUpdate()
     {
-        tr.Translate(dir * 10 * Time.deltaTime);
+        Tr.Translate(dir * 10 * Time.deltaTime);
     }
 
 }
