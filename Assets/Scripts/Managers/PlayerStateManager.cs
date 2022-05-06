@@ -18,7 +18,6 @@ public class PlayerStateManager : Singleton<PlayerStateManager>
             nextState = 0;
             nextIndex = 0;
         }
-        Debug.Log(nextIndex);
         return nextState;
     }
 }

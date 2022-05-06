@@ -20,6 +20,7 @@ public class InputManager : Singleton<InputManager>
 
     public void MoveRight(InputAction.CallbackContext ctx)
     {
+        Debug.Log("Move");
         move.MoveRight(ctx.ReadValue<Vector2>());
     }
     public void Jump(InputAction.CallbackContext ctx)
@@ -55,7 +56,7 @@ public class InputManager : Singleton<InputManager>
             }
             for (int i = 0; i < results.Count; i++)
             {
-                UiManager.Instance.SetGravityValue(0, results[i].worldPosition);
+                UiManager.Instance.SetGravityValue(0, results[i].screenPosition);
             }
         }
     }
@@ -72,7 +73,7 @@ public class InputManager : Singleton<InputManager>
             }
             for (int i = 0; i < results.Count; i++)
             {
-                UiManager.Instance.SetGravityValue(1, results[i].worldPosition);
+                UiManager.Instance.SetGravityValue(1, results[i].screenPosition);
             }
         }
     }

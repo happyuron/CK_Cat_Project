@@ -25,7 +25,8 @@ public class GravityController : MonoBehaviour
     private void SetGravityDirection()
     {
         gravityDirection = secondPos - firstPos;
-        gravityDirection = gravityDirection.normalized * 9.81f;
+        gravityDirection = gravityDirection.normalized;
+        GameManager.Instance.GravityDirection = gravityDirection;
     }
 
     public Vector2 GetGravity()
