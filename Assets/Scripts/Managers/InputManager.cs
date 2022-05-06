@@ -20,6 +20,7 @@ public class InputManager : Singleton<InputManager>
 
     public void MoveRight(InputAction.CallbackContext ctx)
     {
+        Debug.Log("Move");
         move.MoveRight(ctx.ReadValue<Vector2>());
     }
     public void Jump(InputAction.CallbackContext ctx)

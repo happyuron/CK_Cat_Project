@@ -53,7 +53,7 @@ public class Player : Character
 
     public void ChangeToWater()
     {
-        CurState = PlayerStateManager.Instance.ChangePlayerState(CurState);
+        CurState = PlayerState.Water;
         skin.enabled = true;
         collision.enabled = false;
         Rigid2D.gravityScale = 0;
@@ -65,7 +65,7 @@ public class Player : Character
 
     public void ChangeToNormal()
     {
-        CurState = PlayerStateManager.Instance.ChangePlayerState(CurState);
+        CurState = PlayerState.Normal;
         Tr.position = skin.rootBone.transform.position;
         collision.enabled = true;
         skin.enabled = false;

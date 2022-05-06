@@ -11,7 +11,6 @@ public class GameManager : Singleton<GameManager>
         set
         {
             gravityDirection = UiManager.Instance.GetGravityValue();
-            Debug.Log($"{gameObject.name}의 중력값 : " + gravityDirection);
             ApplyGravityToObj<ObjByEffect>();
         }
     }

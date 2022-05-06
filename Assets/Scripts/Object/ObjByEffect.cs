@@ -35,7 +35,6 @@ public class ObjByEffect : MonoBehaviour, IGravityEfftectedObj
     }
     public virtual void SetGravityDirection(Vector2 gravityScale)
     {
-        Debug.Log("GravityScale : " + gravityScale);
         gravityValue = new Vector2(gravityScale.x * 9.81f, gravityScale.y);
         Force2D.force = new Vector2(gravityValue.x, 0);
         Rigid2D.gravityScale = gravityValue.y * -1;
