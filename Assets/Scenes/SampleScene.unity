@@ -1316,6 +1316,7 @@ GameObject:
   - component: {fileID: 1858231549}
   - component: {fileID: 1858231547}
   - component: {fileID: 1858231548}
+  - component: {fileID: 1858231553}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -2828,6 +2829,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!247 &1858231553
+ConstantForce2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669398897}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0}
+  m_RelativeForce: {x: 0, y: 0}
+  m_Torque: 0
 --- !u!1 &1907639221
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,4 +3076,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed26f2aa801e4f04abc2f443777a0259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityController: {fileID: 0}
+  gravityController: {fileID: 487768375}

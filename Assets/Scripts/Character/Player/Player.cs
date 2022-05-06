@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D.Animation;
-public class Player : Character, IGravityEfftectedObj
+public class Player : Character
 {
     private Pivot[] pivotList;
 
@@ -33,7 +33,7 @@ public class Player : Character, IGravityEfftectedObj
         ChangeToNormal();
     }
 
-    public Vector2 GetGravityValue()
+    public override Vector2 GetGravityValue()
     {
 
         return new Vector2(0, 0);

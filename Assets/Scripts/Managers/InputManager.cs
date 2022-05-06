@@ -55,7 +55,7 @@ public class InputManager : Singleton<InputManager>
             }
             for (int i = 0; i < results.Count; i++)
             {
-                UiManager.Instance.SetGravityValue(0, results[i].worldPosition);
+                UiManager.Instance.SetGravityValue(0, results[i].screenPosition);
             }
         }
     }
@@ -72,7 +72,7 @@ public class InputManager : Singleton<InputManager>
             }
             for (int i = 0; i < results.Count; i++)
             {
-                UiManager.Instance.SetGravityValue(1, results[i].worldPosition);
+                UiManager.Instance.SetGravityValue(1, results[i].screenPosition);
             }
         }
     }

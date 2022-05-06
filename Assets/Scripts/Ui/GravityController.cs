@@ -10,6 +10,7 @@ public class GravityController : MonoBehaviour
     private Vector2 gravityDirection;
     public void SetGravity(int index, Vector2 pos)
     {
+        Debug.Log($"{index}번째의 위치 : " + pos);
         if (index == 0)
         {
             firstPos = pos;
@@ -25,11 +26,15 @@ public class GravityController : MonoBehaviour
     private void SetGravityDirection()
     {
         gravityDirection = secondPos - firstPos;
-        gravityDirection = gravityDirection.normalized * 9.81f;
+        gravityDirection = gravityDirection.normalized;
+        Debug.Log("중력 방향 세팅완료, 중력방향 : " + gravityDirection);
+        GameManager.Instance.GravityDirection = gravityDirection;
+        Debug.Log($"{gameObject.name}에서 GravityDirection 설정");
     }
 
     public Vector2 GetGravity()
     {
+        Debug.Log($"{gameObject.name}의 중력의 방향 : " + gravityDirection);
         return gravityDirection;
     }
 }
