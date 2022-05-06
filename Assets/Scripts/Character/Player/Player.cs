@@ -33,18 +33,15 @@ public class Player : Character
         ChangeToWater();
     }
 
-    public void ChangeState(InputAction.CallbackContext ctx)
+    public void ChangeState()
     {
-        if (ctx.ReadValueAsButton())
+        if (CurState == PlayerState.Water)
         {
-            if (CurState == PlayerState.Water)
-            {
-                ChangeToNormal();
-            }
-            else
-            {
-                ChangeToWater();
-            }
+            ChangeToNormal();
+        }
+        else
+        {
+            ChangeToWater();
         }
     }
 

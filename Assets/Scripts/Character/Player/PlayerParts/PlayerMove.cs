@@ -6,20 +6,22 @@ public class PlayerMove : PlayerParts<PlayerMove>
 {
     private Vector2 dir;
 
+    [field: SerializeField] public float MoveSpeed { get; private set; }
+
     private float jumpPower => player.JumpPower;
 
     private bool isJumping => player.IsJumping;
-    public void MoveRight(InputAction.CallbackContext ctx)
+    public void MoveRight(Vector2 value)
     {
         if (player.IsNormalState())
         {
-            dir = ctx.ReadValue<Vector2>();
+            dir = value;
         }
     }
 
-    public void Jump(InputAction.CallbackContext ctx)
+    public void Jump()
     {
-        if (ctx.ReadValueAsButton() && player.IsNormalState() && !isJumping)
+        if (player.IsNormalState() && !isJumping)
         {
             player.Rigid2D.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             player.IsJumping = true;
@@ -33,7 +35,7 @@ public class PlayerMove : PlayerParts<PlayerMove>
 
     private void LateUpdate()
     {
-        Tr.Translate(dir * 10 * Time.deltaTime);
+        Tr.Translate(dir * MoveSpeed * Time.deltaTime);
         FallingCheck();
     }
 
