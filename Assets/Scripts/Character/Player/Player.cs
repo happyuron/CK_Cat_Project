@@ -30,15 +30,14 @@ public class Player : Character
 
     private void Start()
     {
-        ChangeToNormal();
+        ChangeToWater();
     }
 
     public void ChangeState(InputAction.CallbackContext ctx)
     {
         if (ctx.ReadValueAsButton())
         {
-            CurState = PlayerStateManager.Instance.ChangePlayerState(CurState);
-            if (CurState == PlayerState.Normal)
+            if (CurState == PlayerState.Water)
             {
                 ChangeToNormal();
             }
@@ -51,22 +50,25 @@ public class Player : Character
 
     public void ChangeToWater()
     {
+        CurState = PlayerStateManager.Instance.ChangePlayerState(CurState);
         skin.enabled = true;
         collision.enabled = false;
+        Rigid2D.gravityScale = 0;
         for (int i = 0; i < pivotList.Length; i++)
         {
-            pivotList[i].gameObject.SetActive(true);
+            pivotList[i].SetUp();
         }
     }
 
     public void ChangeToNormal()
     {
+        CurState = PlayerStateManager.Instance.ChangePlayerState(CurState);
         Tr.position = skin.rootBone.transform.position;
         collision.enabled = true;
         skin.enabled = false;
+        Rigid2D.gravityScale = 1;
         for (int i = 0; i < pivotList.Length; i++)
         {
-            pivotList[i].gameObject.SetActive(false);
             pivotList[i].ResetPos();
         }
     }
