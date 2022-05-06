@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+interface IGravityEfftectedObj
+{
+    public Vector2 GetGravityValue();
+
+}
+
 public class Character : MonoBehaviour
 {
     public Rigidbody2D Rigid2D { get; protected set; }

@@ -40,6 +40,7 @@ public class InputManager : Singleton<InputManager>
     private void Update()
     {
         ControllerButtonDown();
+        ControllerButtonUp();
     }
     public void ControllerButtonDown()
     {
@@ -54,7 +55,7 @@ public class InputManager : Singleton<InputManager>
             }
             for (int i = 0; i < results.Count; i++)
             {
-                Debug.Log(results[i].gameObject.name);
+                UiManager.Instance.SetGravityValue(0, results[i].worldPosition);
             }
         }
     }
@@ -71,7 +72,7 @@ public class InputManager : Singleton<InputManager>
             }
             for (int i = 0; i < results.Count; i++)
             {
-                Debug.Log(results[i].gameObject.name);
+                UiManager.Instance.SetGravityValue(1, results[i].worldPosition);
             }
         }
     }

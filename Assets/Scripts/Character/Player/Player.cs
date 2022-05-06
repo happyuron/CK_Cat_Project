@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D.Animation;
-public class Player : Character
+public class Player : Character, IGravityEfftectedObj
 {
     private Pivot[] pivotList;
 
@@ -30,7 +30,13 @@ public class Player : Character
 
     private void Start()
     {
-        ChangeToWater();
+        ChangeToNormal();
+    }
+
+    public Vector2 GetGravityValue()
+    {
+
+        return new Vector2(0, 0);
     }
 
     public void ChangeState()
@@ -72,10 +78,7 @@ public class Player : Character
 
     public bool IsNormalState()
     {
-        if (CurState == PlayerState.Normal)
-            return true;
-        else
-            return false;
+        return CurState == PlayerState.Normal ? true : false;
 
     }
 
