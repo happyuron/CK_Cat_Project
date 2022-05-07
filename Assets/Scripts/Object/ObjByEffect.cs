@@ -8,9 +8,8 @@ public interface IGravityEfftectedObj
     public void SetGravityDirection(Vector2 gravityScale);
 }
 
-public class ObjByEffect : MonoBehaviour, IGravityEfftectedObj
+public class ObjByEffect : EveryObject, IGravityEfftectedObj
 {
-    public Transform Tr { get; protected set; }
 
     public Rigidbody2D Rigid2D { get; protected set; }
 
@@ -18,9 +17,9 @@ public class ObjByEffect : MonoBehaviour, IGravityEfftectedObj
 
     private Vector2 gravityValue;
 
-    protected virtual void Awake()
+    protected override void Awake()
     {
-        Tr = GetComponent<Transform>();
+        base.Awake();
         Rigid2D = GetComponent<Rigidbody2D>();
         Force2D = GetComponent<ConstantForce2D>();
         if (Force2D == null)

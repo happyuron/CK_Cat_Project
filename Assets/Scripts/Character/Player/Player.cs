@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.U2D.Animation;
 public class Player : Character
 {
     private Pivot[] pivotList;
+
+    private PlayerMove move;
 
     private Collider2D collision;
 
@@ -15,13 +16,16 @@ public class Player : Character
 
     public PlayerState CurState { get; private set; }
 
-    public bool IsJumping { get; set; }
+    private bool isJumping => move.isJumping;
 
+    private bool isMoving => move.isMoving;
 
-    public IReadOnlyCollection<Pivot> PivotList => pivotList;
+    [SerializeField] public bool isAllowed => !isJumping && !isMoving;
+
     protected override void Awake()
     {
         base.Awake();
+        move = GetComponent<PlayerMove>();
         collision = GetComponent<Collider2D>();
         pivotList = GetComponentsInChildren<Pivot>();
         skin = GetComponentInChildren<SpriteSkin>();
@@ -32,23 +36,17 @@ public class Player : Character
     {
         ChangeToNormal();
     }
-
-    public override Vector2 GetGravityValue()
-    {
-
-        return new Vector2(0, 0);
-    }
-
     public void ChangeState()
     {
-        if (CurState == PlayerState.Water)
+        if (CurState == PlayerState.Water && isAllowed)
         {
             ChangeToNormal();
         }
-        else
+        else if (CurState == PlayerState.Normal && isAllowed)
         {
             ChangeToWater();
         }
+        Debug.Log(CurState);
     }
 
     public void ChangeToWater()

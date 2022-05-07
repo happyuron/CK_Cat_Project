@@ -10,11 +10,14 @@ public class PlayerMove : PlayerParts<PlayerMove>
 
     private float jumpPower => player.JumpPower;
 
-    private bool isJumping => player.IsJumping;
+    public bool isJumping;
+    public bool isMoving;
     public void MoveRight(Vector2 value)
     {
+
         if (player.IsNormalState())
         {
+            isMoving = value.x != 0 ? true : false;
             dir = value;
         }
     }
@@ -24,13 +27,14 @@ public class PlayerMove : PlayerParts<PlayerMove>
         if (player.IsNormalState() && !isJumping)
         {
             player.Rigid2D.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-            player.IsJumping = true;
+            isJumping = true;
         }
     }
+
     public void FallingCheck()
     {
         if (isJumping && player.Rigid2D.velocity.y == 0)
-            player.IsJumping = false;
+            isJumping = false;
     }
 
     private void LateUpdate()

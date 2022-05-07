@@ -2,32 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pivot : MonoBehaviour
+public class Pivot : ObjByEffect
 {
     private Vector2 defaultPosition;
 
     private Collider2D collder;
 
-    private Rigidbody2D rigid;
-    private Quaternion defaultAngleZ;
-    private void Awake()
+    private Quaternion dafalutAngle;
+    protected override void Awake()
     {
-        rigid = GetComponent<Rigidbody2D>();
-        defaultPosition = transform.localPosition;
-        defaultAngleZ = transform.rotation;
+        base.Awake();
+        defaultPosition = Tr.localPosition;
+        dafalutAngle = Tr.rotation;
         collder = GetComponent<Collider2D>();
     }
 
     public void ResetPos()
     {
         collder.enabled = false;
-        transform.localPosition = defaultPosition;
-        transform.rotation = defaultAngleZ;
+        Tr.localPosition = defaultPosition;
+        Tr.rotation = dafalutAngle;
     }
     public void SetUp()
     {
-        rigid.velocity = new Vector2(0, 0);
-        transform.localPosition = defaultPosition;
+        Rigid2D.velocity = new Vector2(0, 0);
+        Tr.localPosition = defaultPosition;
         collder.enabled = true;
     }
 }
