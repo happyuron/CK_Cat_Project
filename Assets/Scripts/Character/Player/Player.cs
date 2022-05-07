@@ -46,7 +46,6 @@ public class Player : Character
         {
             ChangeToWater();
         }
-        Debug.Log(CurState);
     }
 
     public void ChangeToWater()
