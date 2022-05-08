@@ -6,6 +6,7 @@ public interface IGravityEfftectedObj
 {
     public Vector2 GetGravityValue();
     public void SetGravityDirection(Vector2 gravityScale);
+    public void DefaultGravity();
 }
 
 public class ObjByEffect : EveryObject, IGravityEfftectedObj

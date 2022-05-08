@@ -10,7 +10,7 @@ public class Player : Character
 
     private Collider2D collision;
 
-    private SpriteSkin skin;
+    public SpriteSkin Skin { get; protected set; }
 
     [field: SerializeField] public float JumpPower { get; private set; }
 
@@ -28,7 +28,7 @@ public class Player : Character
         move = GetComponent<PlayerMove>();
         collision = GetComponent<Collider2D>();
         pivotList = GetComponentsInChildren<Pivot>();
-        skin = GetComponentInChildren<SpriteSkin>();
+        Skin = GetComponentInChildren<SpriteSkin>();
         CurState = PlayerState.Normal;
     }
 
@@ -51,7 +51,7 @@ public class Player : Character
     public void ChangeToWater()
     {
         CurState = PlayerState.Water;
-        skin.enabled = true;
+        Skin.enabled = true;
         collision.enabled = false;
         Rigid2D.gravityScale = 0;
         for (int i = 0; i < pivotList.Length; i++)
@@ -63,9 +63,9 @@ public class Player : Character
     public void ChangeToNormal()
     {
         CurState = PlayerState.Normal;
-        Tr.position = skin.rootBone.transform.position;
+        Tr.position = Skin.rootBone.transform.position;
         collision.enabled = true;
-        skin.enabled = false;
+        Skin.enabled = false;
         Rigid2D.gravityScale = 1;
         for (int i = 0; i < pivotList.Length; i++)
         {

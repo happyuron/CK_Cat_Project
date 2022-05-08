@@ -22,6 +22,7 @@ public class Pivot : ObjByEffect
         collder.enabled = false;
         Tr.localPosition = defaultPosition;
         Tr.rotation = dafalutAngle;
+        DefaultGravity();
     }
     public void SetUp()
     {
