@@ -16,4 +16,12 @@ public class EveryObject : MonoBehaviour
         T tmp = gameObject.AddComponent<T>();
         return tmp;
     }
+
+    public void DeleteComponent<T>() where T : MonoBehaviour
+    {
+        T tmp = GetComponent<T>();
+        if (tmp != null)
+            Destroy(tmp);
+    }
+
 }
