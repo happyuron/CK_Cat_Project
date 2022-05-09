@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjByPlayer : EveryObject, IGravityEfftectedObj
 {
-    public bool onlyWater;
+    [field: SerializeField] public bool OnlyWater { get; protected set; }
     public Rigidbody2D Rigid2D { get; protected set; }
 
     public ConstantForce2D Force2D { get; protected set; }
@@ -39,6 +39,6 @@ public class ObjByPlayer : EveryObject, IGravityEfftectedObj
     }
     public virtual bool GetOnlyWater()
     {
-        return onlyWater;
+        return OnlyWater;
     }
 }
