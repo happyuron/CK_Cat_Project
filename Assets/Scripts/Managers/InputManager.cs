@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class InputManager : Singleton<InputManager>
 {
     public List<GraphicRaycaster> raycaster;
+    public GraphicRaycaster controller;
     Player player;
     PlayerMove move;
     private void Start()
@@ -54,9 +55,10 @@ public class InputManager : Singleton<InputManager>
             {
                 raycaster[i].Raycast(pos, results);
             }
-            for (int i = 0; i < results.Count; i++)
+            if (results.Count == 0)
             {
-                UiManager.Instance.SetGravityValue(0, results[i].screenPosition);
+                controller.Raycast(pos, results);
+                UiManager.Instance.SetGravityValue(0, results[0].screenPosition);
             }
         }
     }
@@ -71,9 +73,10 @@ public class InputManager : Singleton<InputManager>
             {
                 raycaster[i].Raycast(pos, results);
             }
-            for (int i = 0; i < results.Count; i++)
+            if (results.Count == 0)
             {
-                UiManager.Instance.SetGravityValue(1, results[i].screenPosition);
+                controller.Raycast(pos, results);
+                UiManager.Instance.SetGravityValue(1, results[0].screenPosition);
             }
         }
     }

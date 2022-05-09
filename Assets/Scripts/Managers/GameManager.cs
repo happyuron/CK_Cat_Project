@@ -22,6 +22,16 @@ public class GameManager : Singleton<GameManager>
         player = FindObjectOfType<Player>();
     }
 
+    public IEnumerator GameEnd(Goal goal)
+    {
+        yield return new WaitForSeconds(goal.WaitSecond);
+        if (goal.CheckPlayer())
+        {
+            Time.timeScale = 0;
+        }
+    }
+
+
     public void DefaultGravityToObj<T>() where T : ObjByEffect
     {
         T[] obj = FindObjectsOfType<T>();
