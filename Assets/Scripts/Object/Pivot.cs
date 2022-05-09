@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pivot : ObjByEffect
+public class Pivot : ObjByPlayer
 {
     private Vector2 defaultPosition;
 

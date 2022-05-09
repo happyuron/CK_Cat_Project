@@ -13,7 +13,14 @@ public class GameManager : Singleton<GameManager>
         set
         {
             gravityDirection = UiManager.Instance.GetGravityValue();
-            ApplyGravityToObj<ObjByEffect>();
+            if (player.CurState == PlayerState.Water)
+            {
+                ApplyGravityToObj<ObjByPlayer>();
+            }
+            else if (player.CurState == PlayerState.Normal)
+            {
+                ApplyGravityToObj<ObjByEffect>();
+            }
         }
     }
     protected override void Awake()
@@ -32,7 +39,7 @@ public class GameManager : Singleton<GameManager>
     }
 
 
-    public void DefaultGravityToObj<T>() where T : ObjByEffect
+    public void DefaultGravityToObj<T>() where T : ObjByPlayer
     {
         T[] obj = FindObjectsOfType<T>();
         IGravityEfftectedObj gravityEfftectedObj;
@@ -41,12 +48,13 @@ public class GameManager : Singleton<GameManager>
             gravityEfftectedObj = obj[i].GetComponent<IGravityEfftectedObj>();
             if (gravityEfftectedObj != null)
             {
-                gravityEfftectedObj.DefaultGravity();
+                if (gravityEfftectedObj.GetOnlyWater())
+                    gravityEfftectedObj.DefaultGravity();
             }
         }
     }
 
-    public void ApplyGravityToObj<T>() where T : ObjByEffect
+    public void ApplyGravityToObj<T>() where T : ObjByPlayer
     {
         T[] obj = FindObjectsOfType<T>();
         IGravityEfftectedObj gravityEfftectedObj;

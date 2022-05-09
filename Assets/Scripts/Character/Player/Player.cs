@@ -62,6 +62,7 @@ public class Player : Character
 
     public void ChangeToNormal()
     {
+        GameManager.Instance.DefaultGravityToObj<ObjByPlayer>();
         CurState = PlayerState.Normal;
         Tr.position = Skin.rootBone.transform.position;
         collision.enabled = true;
