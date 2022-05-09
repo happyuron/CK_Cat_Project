@@ -19,15 +19,16 @@ public class Pivot : ObjByEffect
 
     public void ResetPos()
     {
+        DefaultGravity();
         collder.enabled = false;
         Tr.localPosition = defaultPosition;
         Tr.rotation = dafalutAngle;
-        DefaultGravity();
     }
     public void SetUp()
     {
         Rigid2D.velocity = new Vector2(0, 0);
         Tr.localPosition = defaultPosition;
+        Tr.rotation = dafalutAngle;
         collder.enabled = true;
     }
 }
