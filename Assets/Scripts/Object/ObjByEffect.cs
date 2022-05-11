@@ -12,4 +12,5 @@ public interface IGravityEfftectedObj
 
 public class ObjByEffect : ObjByPlayer
 {
+    private Object obj;
 }
