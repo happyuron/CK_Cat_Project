@@ -59,6 +59,7 @@ public class Player : Character
         for (int i = 0; i < pivotList.Length; i++)
         {
             pivotList[i].SetUp();
+            pivotList[i].GetComponent<Rigidbody2D>().velocity = Rigid2D.velocity;
         }
     }
 
