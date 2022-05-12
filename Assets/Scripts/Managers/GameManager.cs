@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    public float gravity;
     private Vector2 gravityDirection;
     public Player player;
 

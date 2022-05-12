@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ObjByPlayer : EveryObject, IGravityEfftectedObj
 {
+
     [field: SerializeField] public bool OnlyWater { get; protected set; }
     public Rigidbody2D Rigid2D { get; protected set; }
 
     public ConstantForce2D Force2D { get; protected set; }
 
     protected Vector2 gravityValue;
+    private float gravity => GameManager.Instance.gravity;
 
     protected override void Awake()
     {
@@ -28,7 +30,7 @@ public class ObjByPlayer : EveryObject, IGravityEfftectedObj
     }
     public virtual void SetGravityDirection(Vector2 gravityScale)
     {
-        gravityValue = new Vector2(gravityScale.x * 9.81f, gravityScale.y);
+        gravityValue = new Vector2(gravityScale.x * 9.81f, gravityScale.y) * gravity;
         Force2D.force = new Vector2(gravityValue.x, 0);
         Rigid2D.gravityScale = gravityValue.y * -1;
     }

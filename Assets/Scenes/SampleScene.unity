@@ -5834,6 +5834,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 2208968381617990873, guid: 508930fa87e12bd4d9b76c9993455f3d, type: 3}
+      propertyPath: gravity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208968381617990873, guid: 508930fa87e12bd4d9b76c9993455f3d, type: 3}
       propertyPath: dontDestroyOnLoad
       value: 1
       objectReference: {fileID: 0}
