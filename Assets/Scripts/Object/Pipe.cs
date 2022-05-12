@@ -15,7 +15,7 @@ public class Pipe : EveryObject
     private void Start()
     {
         player = GameManager.Instance.player;
-        targetTr = GameManager.Instance.player.Skin.rootBone.transform;
+        targetTr = GameManager.Instance.player.born.transform;
     }
 
     private bool CheckDistance()
@@ -30,8 +30,7 @@ public class Pipe : EveryObject
     }
     private bool IsPlayer()
     {
-        if (targetTr.gameObject.layer == LayerMask.NameToLayer("Pivot") ||
-            targetTr.gameObject.layer == LayerMask.NameToLayer("Player"))
+        if (targetTr.gameObject.layer == LayerMask.NameToLayer("Pivot"))
             return true;
         return false;
     }

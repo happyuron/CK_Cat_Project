@@ -37,7 +37,7 @@ public class PlayerMove : PlayerParts<PlayerMove>
             isJumping = false;
     }
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         Tr.Translate(dir * MoveSpeed * Time.deltaTime);
         FallingCheck();

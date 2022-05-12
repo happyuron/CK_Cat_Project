@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4276953563708997453}
   - component: {fileID: 1921514899700616503}
   - component: {fileID: 1055405640807912984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3262305502600052211}
   - component: {fileID: 5941538460778568068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SamplePalette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
