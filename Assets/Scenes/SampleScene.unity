@@ -5826,16 +5826,36 @@ PrefabInstance:
     - target: {fileID: 6626018641596283113, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6200000, guid: 30841685162cf274f920222b8f691653, type: 2}
     - target: {fileID: 6626018641596283114, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
       propertyPath: m_Material
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626018641596283114, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626018641596283114, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6626018641596283155, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
       propertyPath: hitLayer.m_Bits
       value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 6626018641596283155, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
+      propertyPath: wallCheckDistance
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626018641596283155, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
+      propertyPath: groundCheckDistance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626018641596283155, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
+      propertyPath: <MoveSpeed>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626018641596283156, guid: 96566d0119a8fbb4f856583fc3fb6741, type: 3}
       propertyPath: <MoveSpeed>k__BackingField
       value: 3
       objectReference: {fileID: 0}

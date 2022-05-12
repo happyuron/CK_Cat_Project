@@ -11,7 +11,7 @@
                     "id": "7e454e32-d5aa-4b16-bbe9-0bb8a55a22f8",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": true
                 },
                 {
@@ -38,7 +38,7 @@
                     "name": "LeftArrow , Right Arrow",
                     "id": "54ab4ebe-7220-4fa9-8cd6-2d3d748800a0",
                     "path": "2DVector",
-                    "interactions": "Hold",
+                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",

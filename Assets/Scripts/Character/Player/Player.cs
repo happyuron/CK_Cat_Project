@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.U2D.Animation;
 public class Player : Character
 {
+
     private Pivot[] pivotList;
 
     private PlayerMove move;
@@ -16,7 +17,10 @@ public class Player : Character
     public Transform born { get; protected set; }
 
     [field: SerializeField] public float JumpPower { get; protected set; }
+    [field: SerializeField] public float MoveSpeed { get; private set; }
 
+    public float DirX { get; set; }
+    public bool isChangedRight;
     public PlayerState CurState { get; protected set; }
 
     private bool isJumping => move.isJumping;
@@ -66,6 +70,7 @@ public class Player : Character
     public void ChangeToNormal()
     {
         CurState = PlayerState.Normal;
+        DirX = born.GetComponent<Rigidbody2D>().velocity.x;
         Rigid2D.velocity = born.GetComponent<Rigidbody2D>().velocity;
         MakeEnable(CurState);
         GameManager.Instance.DefaultGravityToObj<ObjByPlayer>();
@@ -85,6 +90,7 @@ public class Player : Character
             normal.SetActive(true);
             water.SetActive(false);
             collision.enabled = true;
+            isChangedRight = true;
         }
         else if (state == PlayerState.Water)
         {
