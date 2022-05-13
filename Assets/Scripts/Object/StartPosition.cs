@@ -2,24 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal : TriggerObject
+public class StartPosition : TriggerObject
 {
-    [field: SerializeField] public float WaitSecond { get; private set; }
+    [SerializeField] private Transform startPos;
 
     protected override void Awake()
     {
         base.Awake();
+        if (startPos == null)
+            startPos = GetComponentInChildren<Transform>();
     }
 
     protected override void OnCheckStart()
     {
-        GameManager.Instance.ClearGame(this);
+        StageManager.Instance.SavePos(startPos);
     }
 
     protected override void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.green;
         base.OnDrawGizmos();
-    }
 
+    }
 }

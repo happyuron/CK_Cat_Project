@@ -1,16 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StageManager : Singleton<StageManager>
 {
-    public Transform StartPos { get; private set; }
+    public Vector2 StartPos { get; private set; }
 
-    private Transform force;
+    public StartPosition[] SavePoint { get; private set; }
 
-    protected override void Awake()
+
+
+    public void SavePos(Transform tr)
     {
-        base.Awake();
+        StartPos = tr.position;
+    }
 
+    public void LoadPos(EveryObject obj)
+    {
+        obj.Tr.position = StartPos;
     }
 }

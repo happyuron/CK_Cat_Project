@@ -77,4 +77,8 @@ public class TriggerObject : EveryObject
         CheckObjectStay();
         CheckObjectExit();
     }
+    protected virtual void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(offset + transform.position, size);
+    }
 }
