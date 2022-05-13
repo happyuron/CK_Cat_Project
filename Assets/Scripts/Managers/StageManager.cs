@@ -18,6 +18,26 @@ public class StageManager : Singleton<StageManager>
 
     public void LoadPos(EveryObject obj)
     {
-        obj.Tr.position = StartPos;
+        if (obj != null)
+        {
+            obj.Tr.position = StartPos;
+        }
+    }
+    public void LoadPlayerPos(EveryObject obj)
+    {
+        Player player = obj.GetComponent<Player>() ?? obj.GetComponentInParent<Player>();
+        player.Rigid2D.velocity = Vector2.zero;
+        if (!player.IsNormalState())
+        {
+            player.ChangeState();
+            player.Rigid2D.velocity = Vector2.zero;
+            player.Tr.position = StartPos;
+            player.ChangeState();
+        }
+        else
+        {
+            player.Tr.position = StartPos;
+        }
+
     }
 }

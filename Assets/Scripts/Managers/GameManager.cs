@@ -38,7 +38,7 @@ public class GameManager : Singleton<GameManager>
     private IEnumerator GameEnd(Goal goal)
     {
         yield return new WaitForSeconds(goal.WaitSecond);
-        if (goal.CheckObject())
+        if (goal.CheckObject<Player, Pivot>())
         {
             Time.timeScale = 0;
         }

@@ -55,7 +55,7 @@ public class Player : Character
         }
     }
 
-    public void ChangeToWater()
+    protected void ChangeToWater()
     {
         CurState = PlayerState.Water;
         MakeEnable(CurState);
@@ -67,7 +67,7 @@ public class Player : Character
         }
     }
 
-    public void ChangeToNormal()
+    protected void ChangeToNormal()
     {
         CurState = PlayerState.Normal;
         DirX = born.GetComponent<Rigidbody2D>().velocity.x;
