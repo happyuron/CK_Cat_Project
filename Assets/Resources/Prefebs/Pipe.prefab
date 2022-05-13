@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.88, y: 2.72}
+  m_Size: {x: 35.53, y: 18.83}
   m_EdgeRadius: 0
 --- !u!1 &8243516272842170951
 GameObject:
@@ -312,4 +312,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entrance: {fileID: 8243516272297711822}
   exit: {fileID: 8243516272842170948}
-  minDistance: 1
+  minDistance: 0.2

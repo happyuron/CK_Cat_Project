@@ -30,10 +30,15 @@ public class GameManager : Singleton<GameManager>
         player = FindObjectOfType<Player>();
     }
 
-    public IEnumerator GameEnd(Goal goal)
+    public void ClearGame(Goal goal)
+    {
+        StartCoroutine(GameEnd(goal));
+    }
+
+    private IEnumerator GameEnd(Goal goal)
     {
         yield return new WaitForSeconds(goal.WaitSecond);
-        if (goal.CheckPlayer())
+        if (goal.CheckObject())
         {
             Time.timeScale = 0;
         }
