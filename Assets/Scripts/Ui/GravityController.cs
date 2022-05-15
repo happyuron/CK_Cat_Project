@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GravityController : MonoBehaviour
+public class GravityController : Singleton<GravityController>
 {
     private Vector2 firstPos;
     private Vector2 secondPos;
-
     private Vector2 gravityDirection;
     public void SetGravity(int index, Vector2 pos)
     {

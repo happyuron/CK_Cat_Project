@@ -2,14 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageManager : Singleton<StageManager>
 {
+    public int NextSceneIndex;
     public Vector2 StartPos { get; private set; }
 
     public StartPosition[] SavePoint { get; private set; }
 
 
+    protected override void Awake()
+    {
+        base.Awake();
+        NextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+    }
 
     public void SavePos(Transform tr)
     {
@@ -25,7 +32,6 @@ public class StageManager : Singleton<StageManager>
     }
     public void LoadPlayerPos(EveryObject obj)
     {
-        Debug.Log("Load");
         Player player = obj.GetComponent<Player>() ?? obj.GetComponentInParent<Player>();
         player.Rigid2D.velocity = Vector2.zero;
         if (!player.IsNormalState())

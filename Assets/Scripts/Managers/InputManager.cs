@@ -17,6 +17,8 @@ public class InputManager : Singleton<InputManager>
         {
             move = player.gameObject.GetComponent<PlayerMove>();
         }
+        else
+            Debug.Log("PlayerNull");
     }
 
     public void MoveRight(InputAction.CallbackContext ctx)
@@ -57,7 +59,7 @@ public class InputManager : Singleton<InputManager>
             if (results.Count == 0)
             {
                 controller.Raycast(pos, results);
-                UiManager.Instance.SetGravityValue(0, results[0].screenPosition);
+                GravityController.Instance.SetGravity(0, results[0].screenPosition);
             }
         }
     }
@@ -75,7 +77,7 @@ public class InputManager : Singleton<InputManager>
             if (results.Count == 0)
             {
                 controller.Raycast(pos, results);
-                UiManager.Instance.SetGravityValue(1, results[0].screenPosition);
+                GravityController.Instance.SetGravity(1, results[0].screenPosition);
             }
         }
     }

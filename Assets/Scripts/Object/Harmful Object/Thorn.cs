@@ -11,7 +11,6 @@ public class Thorn : TriggerObject
         target = CheckObject<Pivot>() ?? target;
         if (target != null)
         {
-            Debug.Log("StartCoroutine");
             StartCoroutine(PlayerDead());
         }
     }

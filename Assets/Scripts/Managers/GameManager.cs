@@ -13,7 +13,7 @@ public class GameManager : Singleton<GameManager>
         get { return gravityDirection; }
         set
         {
-            gravityDirection = UiManager.Instance.GetGravityValue();
+            gravityDirection = GravityController.Instance.GetGravity();
             if (player.CurState == PlayerState.Water)
             {
                 ApplyGravityToObj<ObjByPlayer>();
@@ -45,6 +45,7 @@ public class GameManager : Singleton<GameManager>
         if (goal.CheckObject<Player, Pivot>())
         {
             Time.timeScale = 0;
+            SceneLoader.LoadScene(StageManager.Instance.NextSceneIndex);
         }
     }
 
