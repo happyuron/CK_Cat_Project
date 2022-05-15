@@ -35,7 +35,7 @@ public class GameManager : Singleton<GameManager>
         if (goal.CheckObject<Player, Pivot>())
         {
             Time.timeScale = 0;
-            SceneLoader.LoadScene(StageManager.Instance.NextSceneIndex);
+            SceneLoader.Instance.LoadScene(StageManager.Instance.NextSceneIndex);
             Time.timeScale = 1;
         }
     }

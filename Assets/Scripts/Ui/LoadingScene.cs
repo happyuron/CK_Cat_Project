@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 public class LoadingScene : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class LoadingScene : MonoBehaviour
 
     [SerializeField] private Image loadingBar;
 
-    [SerializeField] private Text text;
+    [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private CanvasGroup canvasGroup;
 
     private int index;
@@ -28,7 +29,9 @@ public class LoadingScene : MonoBehaviour
         gameObject.SetActive(true);
         index = sceneIndex;
         FadeInOut(true);
-        LoadSceneProcess();
+        var task = Task.Run(() => LoadingSceneProcess());
+
+        task.Start();
     }
     private void LoadingSceneProcess()
     {
@@ -81,14 +84,5 @@ public class LoadingScene : MonoBehaviour
         string tmp = value.ToString() + "%";
         return tmp;
     }
-
-    async private Task LoadSceneProcess()
-    {
-        var task = Task.Run(() => LoadingSceneProcess());
-
-
-        await task;
-    }
-
 
 }

@@ -11,7 +11,7 @@ public class SceneLoader : Singleton<SceneLoader>
         base.Awake();
     }
 
-    public static void LoadScene(int sceneIndex)
+    public void LoadScene(int sceneIndex)
     {
         sceneLoad.LoadScene(sceneIndex);
         SceneManager.LoadScene(sceneIndex);
