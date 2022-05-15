@@ -27,6 +27,10 @@ public class GameManager : Singleton<GameManager>
     protected override void Awake()
     {
         base.Awake();
+    }
+
+    protected void Start()
+    {
         player = FindObjectOfType<Player>();
     }
 
