@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class Thorn : TriggerObject
 {
+    private EveryObject target;
     protected override void OnCheckStart()
     {
-        if (CheckObject<Player, Pivot>())
+        target = CheckObject<Player>();
+        target = CheckObject<Pivot>() ?? target;
+        if (target != null)
         {
-            StageManager.Instance.LoadPlayerPos(CheckObject<EveryObject>());
+            Debug.Log("StartCoroutine");
+            StartCoroutine(PlayerDead());
         }
+    }
+
+    private IEnumerator PlayerDead()
+    {
+        yield return new WaitForSeconds(1.0f);
+        StageManager.Instance.LoadPlayerPos(target);
     }
 
 

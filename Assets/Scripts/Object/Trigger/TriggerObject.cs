@@ -9,7 +9,7 @@ public class TriggerObject : EveryObject
 
 
     public LayerMask hitLayer;
-    protected bool isOnce = false;
+    public bool isOnce = false;
 
     #region TriggerSystem
 
@@ -31,40 +31,21 @@ public class TriggerObject : EveryObject
     private bool CheckObjectStay()
     {
         Collider2D tmp = Physics2D.OverlapBox(Tr.position + offset, size, 0, hitLayer);
-        if (tmp != null)
+        if (tmp != null && !isOnce)
+        {
+            OnCheckStart();
+            isOnce = true;
+        }
+        else if (tmp == null && isOnce)
+        {
+            OnCheckExit();
+            isOnce = false;
+        }
+        else if (tmp != null)
         {
             OnCheckStay();
         }
         return tmp;
-    }
-
-    private bool CheckObjectStart()
-    {
-        if (!isOnce)
-        {
-            Collider2D tmp = Physics2D.OverlapBox(Tr.position + offset, size, 0, hitLayer);
-            if (tmp != null)
-            {
-                isOnce = true;
-                OnCheckStart();
-                return tmp;
-            }
-        }
-        return false;
-    }
-    private bool CheckObjectExit()
-    {
-        if (isOnce)
-        {
-            Collider2D tmp = Physics2D.OverlapBox(Tr.position + offset, size, 0, hitLayer);
-            if (tmp == null)
-            {
-                isOnce = false;
-                OnCheckExit();
-            }
-            return tmp;
-        }
-        return false;
     }
     #endregion
 
@@ -82,9 +63,7 @@ public class TriggerObject : EveryObject
     }
     protected virtual void FixedUpdate()
     {
-        CheckObjectStart();
         CheckObjectStay();
-        CheckObjectExit();
     }
     protected virtual void OnDrawGizmos()
     {

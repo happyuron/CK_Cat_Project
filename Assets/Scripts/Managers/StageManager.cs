@@ -25,6 +25,7 @@ public class StageManager : Singleton<StageManager>
     }
     public void LoadPlayerPos(EveryObject obj)
     {
+        Debug.Log("Load");
         Player player = obj.GetComponent<Player>() ?? obj.GetComponentInParent<Player>();
         player.Rigid2D.velocity = Vector2.zero;
         if (!player.IsNormalState())
