@@ -30,7 +30,6 @@ public class LoadingScene : MonoBehaviour
         index = sceneIndex;
         FadeInOut(true);
         var task = Task.Run(() => LoadingSceneProcess());
-
         task.Start();
     }
     private void LoadingSceneProcess()
