@@ -1,18 +1,19 @@
-using System.Threading.Tasks;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : Singleton<SceneLoader>
 {
 
+    public LoadingScene sceneLoad;
 
-    public static void LoadScene(string sceneName)
+    protected override void Awake()
     {
-        SceneManager.LoadScene(sceneName);
+        base.Awake();
     }
+
     public static void LoadScene(int sceneIndex)
     {
+        sceneLoad.LoadScene(sceneIndex);
         SceneManager.LoadScene(sceneIndex);
     }
 }

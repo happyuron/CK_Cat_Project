@@ -13,11 +13,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             Instance = GetComponent<T>();
         }
-        else
-        {
-            Debug.LogError($"Failed to Instantiate {typeof(T).Name} since it already exist");
-        }
-
 
         if (dontDestroyOnLoad)
         {

@@ -5036,6 +5036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0f1bf8196576e4a9936449ec499943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5787,11 +5788,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3642770037497351346, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
       propertyPath: size.x
-      value: 4.93
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3642770037497351346, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
       propertyPath: size.y
-      value: 8.17
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3642770037497351346, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
       propertyPath: rangeColor.b
@@ -5811,11 +5812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3642770037497351347, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 3642770037497351347, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 3642770037497351347, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
       propertyPath: m_LocalPosition.z
