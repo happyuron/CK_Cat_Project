@@ -24,16 +24,6 @@ public class GameManager : Singleton<GameManager>
             }
         }
     }
-    protected override void Awake()
-    {
-        base.Awake();
-    }
-
-    protected void Start()
-    {
-        player = FindObjectOfType<Player>();
-    }
-
     public void ClearGame(Goal goal)
     {
         StartCoroutine(GameEnd(goal));
@@ -46,6 +36,7 @@ public class GameManager : Singleton<GameManager>
         {
             Time.timeScale = 0;
             SceneLoader.LoadScene(StageManager.Instance.NextSceneIndex);
+            Time.timeScale = 1;
         }
     }
 

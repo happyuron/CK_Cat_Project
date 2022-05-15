@@ -15,7 +15,15 @@ public class StageManager : Singleton<StageManager>
     protected override void Awake()
     {
         base.Awake();
-        NextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (NextSceneIndex == 0)
+        {
+            if (SceneManager.GetSceneAt(SceneManager.GetActiveScene().buildIndex + 1) == null)
+                NextSceneIndex = 0;
+            else
+                NextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        }
+
     }
 
     public void SavePos(Transform tr)

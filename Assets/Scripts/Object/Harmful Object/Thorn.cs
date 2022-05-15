@@ -11,14 +11,17 @@ public class Thorn : TriggerObject
         target = CheckObject<Pivot>() ?? target;
         if (target != null)
         {
+            //GameManager.Instance.player.IsDead = true;
             StartCoroutine(PlayerDead());
         }
     }
 
     private IEnumerator PlayerDead()
     {
+
         yield return new WaitForSeconds(1.0f);
         StageManager.Instance.LoadPlayerPos(target);
+        StopAllCoroutines();
     }
 
 

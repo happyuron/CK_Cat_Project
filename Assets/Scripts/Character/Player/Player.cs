@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.U2D.Animation;
 public class Player : Character
 {
-
+    #region 변수들
     private Pivot[] pivotList;
 
     private PlayerMove move;
@@ -18,17 +18,18 @@ public class Player : Character
 
     [field: SerializeField] public float JumpPower { get; protected set; }
     [field: SerializeField] public float MoveSpeed { get; private set; }
+    [SerializeField] public bool isAllowed => !isJumping && !isMoving;
+    public PlayerState CurState { get; set; }
+
 
     public float DirX { get; set; }
     public bool isChangedRight;
-    public PlayerState CurState { get; protected set; }
 
     private bool isJumping => move.isJumping;
 
     private bool isMoving => move.isMoving;
 
-    [SerializeField] public bool isAllowed => !isJumping && !isMoving;
-
+    #endregion
     protected override void Awake()
     {
         base.Awake();
@@ -41,6 +42,7 @@ public class Player : Character
 
     private void Start()
     {
+        GameManager.Instance.player = this;
         ChangeToNormal();
     }
     public void ChangeState()
@@ -103,6 +105,7 @@ public class Player : Character
 
     public bool IsNormalState()
     {
+
         return CurState == PlayerState.Normal ? true : false;
 
     }
