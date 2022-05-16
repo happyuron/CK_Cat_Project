@@ -47,6 +47,7 @@ public class LoadingScene : MonoBehaviour
             {
                 op.allowSceneActivation = true;
                 StartCoroutine(Fade(false));
+                UiManager.Instance.HideSetMenu();
             }
         }
     }

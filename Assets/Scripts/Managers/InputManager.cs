@@ -6,12 +6,25 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class InputManager : Singleton<InputManager>
 {
-    public List<GraphicRaycaster> raycaster;
+    public GraphicRaycaster[] raycaster;
     public GraphicRaycaster controller;
-    Player player;
-    PlayerMove move;
+    private Player player;
+    private PlayerMove move;
+
+    private bool set;
     private void Start()
     {
+        set = true;
+        raycaster = FindObjectsOfType<GraphicRaycaster>();
+        for (int i = 0; i < raycaster.Length; i++)
+        {
+            if (raycaster[i] == controller)
+            {
+                raycaster[i] = null;
+                break;
+            }
+        }
+
         player = FindObjectOfType<Player>();
         if (player != null)
         {
@@ -52,15 +65,18 @@ public class InputManager : Singleton<InputManager>
             PointerEventData pos = new PointerEventData(null);
             pos.position = Input.mousePosition;
             List<RaycastResult> results = new List<RaycastResult>();
-            for (int i = 0; i < raycaster.Count; i++)
+            for (int i = 0; i < raycaster.Length; i++)
             {
-                raycaster[i].Raycast(pos, results);
+                if (raycaster[i] != null)
+                    raycaster[i].Raycast(pos, results);
             }
             if (results.Count == 0)
             {
                 controller.Raycast(pos, results);
-                GravityController.Instance.SetGravity(0, results[0].screenPosition);
+                GravityController.Instance.SetGravity(0, pos.position);
             }
+            else
+                set = false;
         }
     }
     public void ControllerButtonUp()
@@ -70,15 +86,17 @@ public class InputManager : Singleton<InputManager>
             PointerEventData pos = new PointerEventData(null);
             pos.position = Input.mousePosition;
             List<RaycastResult> results = new List<RaycastResult>();
-            for (int i = 0; i < raycaster.Count; i++)
+            for (int i = 0; i < raycaster.Length; i++)
             {
-                raycaster[i].Raycast(pos, results);
+                if (raycaster[i] != null)
+                    raycaster[i].Raycast(pos, results);
             }
-            if (results.Count == 0)
+            if (results.Count == 0 && set)
             {
                 controller.Raycast(pos, results);
-                GravityController.Instance.SetGravity(1, results[0].screenPosition);
+                GravityController.Instance.SetGravity(1, pos.position);
             }
+            set = true;
         }
     }
 }

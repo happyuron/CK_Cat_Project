@@ -14,6 +14,5 @@ public class SceneLoader : Singleton<SceneLoader>
     public void LoadScene(int sceneIndex)
     {
         sceneLoad.LoadScene(sceneIndex);
-        
     }
 }

@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class StageManager : Singleton<StageManager>
 {
-    public int NextSceneIndex;
     public Vector2 StartPos { get; private set; }
 
     public StartPosition[] SavePoint { get; private set; }
+
+    public AudioClip clip;
+    public bool showSettingButton = true;
+    public int NextSceneIndex;
 
 
     protected override void Awake()
