@@ -33,31 +33,31 @@ public class TriggerObject : EveryObject
         Collider2D tmp = Physics2D.OverlapBox(Tr.position + offset, size, 0, hitLayer);
         if (tmp != null && !isOnce)
         {
-            OnCheckStart();
+            OnCheckStart(tmp);
             isOnce = true;
         }
         else if (tmp == null && isOnce)
         {
-            OnCheckExit();
+            OnCheckExit(tmp);
             isOnce = false;
         }
         else if (tmp != null)
         {
-            OnCheckStay();
+            OnCheckStay(tmp);
         }
         return tmp;
     }
     #endregion
 
-    protected virtual void OnCheckStart()
+    protected virtual void OnCheckStart(Collider2D tmp)
     {
 
     }
-    protected virtual void OnCheckStay()
+    protected virtual void OnCheckStay(Collider2D tmp)
     {
 
     }
-    protected virtual void OnCheckExit()
+    protected virtual void OnCheckExit(Collider2D tmp)
     {
 
     }

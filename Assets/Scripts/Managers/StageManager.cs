@@ -13,22 +13,14 @@ public class StageManager : Singleton<StageManager>
     public AudioClip mainBGM;
 
 
+
     public bool showSettingButton = true;
     public int NextSceneIndex;
 
-
-    protected override void Awake()
+    private void Start()
     {
-        base.Awake();
-        if (NextSceneIndex == 0)
-        {
-            if (SceneManager.GetSceneAt(SceneManager.GetActiveScene().buildIndex + 1) == null)
-                NextSceneIndex = 0;
-            else
-                NextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-
-        }
-
+        SoundManager.Instance.audioSource.clip = mainBGM;
+        SoundManager.Instance.PlayMainSound();
     }
 
     public void SavePos(Transform tr)

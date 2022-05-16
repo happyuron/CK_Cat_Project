@@ -11,7 +11,7 @@ public class Goal : TriggerObject
         base.Awake();
     }
 
-    protected override void OnCheckStart()
+    protected override void OnCheckStart(Collider2D collider)
     {
         GameManager.Instance.ClearGame(this);
     }

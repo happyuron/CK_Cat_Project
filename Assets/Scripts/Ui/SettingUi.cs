@@ -17,7 +17,6 @@ public class SettingUi : MonoBehaviour
 
     private void Start()
     {
-        UiManager.Instance.settingButton = settingButton;
         settingButton.onClick.AddListener(() => UiManager.Instance.PopUpSetMenu());
 
         closeButton.onClick.AddListener(() => UiManager.Instance.HideSetMenu());

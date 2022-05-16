@@ -10,7 +10,6 @@ public class LoadingScene : MonoBehaviour
 {
     [SerializeField] private Image background;
 
-    [SerializeField] private CanvasGroup canvasGroup;
 
     private RectTransform rectTr;
 
@@ -44,7 +43,7 @@ public class LoadingScene : MonoBehaviour
         {
             yield return null;
             rectTr.localPosition = Vector2.MoveTowards(rectTr.localPosition, dirVec, 50);
-            if (Vector2.Distance(rectTr.localPosition, new Vector2(0, 0)) < 50)
+            if (Vector2.Distance(rectTr.localPosition, new Vector2(0, 0)) <= 60)
             {
                 AsyncOperation op = SceneManager.LoadSceneAsync(index);
                 op.allowSceneActivation = false;
@@ -54,7 +53,6 @@ public class LoadingScene : MonoBehaviour
                     if (op.progress >= 0.9f)
                     {
                         op.allowSceneActivation = true;
-                        UiManager.Instance.HideSetMenu();
                     }
                 }
 
@@ -62,6 +60,7 @@ public class LoadingScene : MonoBehaviour
             if (Vector2.Distance(rectTr.localPosition, dirVec) < 10)
             {
                 gameObject.SetActive(false);
+                //UiManager.Instance.HideSetMenu();
                 break;
             }
         }

@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!224 &79743228 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1600136515658084603, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
+  m_PrefabInstance: {fileID: 1358011526323863333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &131963061
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
-  mainBGM: {fileID: 0}
+  mainBGM: {fileID: 8300000, guid: ac1f29883da560c42a49b2aca67e8ce4, type: 3}
   showSettingButton: 1
   NextSceneIndex: 1
 --- !u!4 &212820007
@@ -1048,6 +1053,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1358011525304365588, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
+      propertyPath: _animationInfos.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358011525304365588, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
+      propertyPath: _animationInfos.Array.data[2].<DoFade>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1358011525304365588, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
+      propertyPath: _animationInfos.Array.data[2].<Target>k__BackingField
+      value: 
+      objectReference: {fileID: 79743228}
+    - target: {fileID: 1358011525304365588, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
+      propertyPath: _animationInfos.Array.data[2].<Duration>k__BackingField
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1358011526613153974, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1083,6 +1104,14 @@ PrefabInstance:
     - target: {fileID: 3865289106990775117, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
       propertyPath: m_Volume
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865289106990775117, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
+      propertyPath: MinDistance
+      value: 56.39509
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865289106990775117, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4016416445320767810, guid: 6545c0ac8d5a38949a865ddb927ca455, type: 3}
       propertyPath: m_Alpha

@@ -37,7 +37,6 @@ public class Player : Character
     protected override void Awake()
     {
         base.Awake();
-        eyeAnim = GetComponentInChildren<Animator>();
         move = GetComponent<PlayerMove>();
         collision = GetComponent<Collider2D>();
         pivotList = GetComponentsInChildren<Pivot>();

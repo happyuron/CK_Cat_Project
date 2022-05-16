@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4350559951162392218}
   - component: {fileID: 829156852006342343}
   - component: {fileID: 7500129938837382458}
+  - component: {fileID: 6720426408096994333}
   m_Layer: 0
   m_Name: EyeAnim
   m_TagString: Untagged
@@ -105,6 +106,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6720426408096994333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3427631735754980737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9503cef10549e4887630c9bd0a0e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4734106744931162561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,7 +2939,7 @@ MonoBehaviour:
   hitLayer:
     serializedVersion: 2
     m_Bits: 0
-  groundCheckDistance: 0
+  groundCheckDistance: 0.4
   isJumping: 0
   isMoving: 0
 --- !u!114 &6626018641596283156
@@ -2945,7 +2958,7 @@ MonoBehaviour:
   normal: {fileID: 6626018640867637068}
   water: {fileID: 4734106745970850647}
   <JumpPower>k__BackingField: 5
-  <MoveSpeed>k__BackingField: 0
+  <MoveSpeed>k__BackingField: 3
   eyeAnimValueName: PlayerWater
   animValueName: Player
   eyeAnim: {fileID: 7500129938837382458}

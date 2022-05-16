@@ -14,8 +14,14 @@ public class SoundManager : Singleton<SoundManager>
     {
         base.Awake();
         audioSource = GetComponent<AudioSource>();
+        mainSoundValue = 1;
+        soundEffectValue = 1;
     }
 
+    public void PlayMainSound()
+    {
+        audioSource.Play();
+    }
 
     public static void PlaySoundShot()
     {

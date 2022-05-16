@@ -13,7 +13,7 @@ public class StartPosition : TriggerObject
             startPos = GetComponentInChildren<Transform>();
     }
 
-    protected override void OnCheckStart()
+    protected override void OnCheckStart(Collider2D collider)
     {
         StageManager.Instance.SavePos(startPos);
     }

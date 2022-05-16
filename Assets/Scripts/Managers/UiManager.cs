@@ -20,7 +20,6 @@ public class UiManager : Singleton<UiManager>
 
     public void HideSetMenu()
     {
-
         settingButton.gameObject.SetActive(StageManager.Instance.showSettingButton);
         settingUi.gameObject.SetActive(false);
     }
