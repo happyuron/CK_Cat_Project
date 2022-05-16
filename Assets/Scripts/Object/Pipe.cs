@@ -42,6 +42,7 @@ public class Pipe : EveryObject
         {
             player.ChangeState();
             player.Tr.position = exit.transform.position;
+            player.Rigid2D.velocity = Vector2.zero;
             player.ChangeState();
         }
         else if (CheckDistance())

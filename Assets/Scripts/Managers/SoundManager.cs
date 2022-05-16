@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
+    public AudioClip[] clips = Resources.LoadAll("Resources/Sound") as AudioClip[];
     public AudioSource audioSource;
-    public float mainSoundValue { get; set; }
+    public float MainSoundValue { get; set; }
 
-    public float soundEffectValue { get; set; }
+    public float SoundEffectValue { get; set; }
 
 
     protected override void Awake()
     {
         base.Awake();
         audioSource = GetComponent<AudioSource>();
-        mainSoundValue = 1;
-        soundEffectValue = 1;
+        MainSoundValue = 1;
+        SoundEffectValue = 1;
     }
 
     public void PlayMainSound()
@@ -23,15 +24,16 @@ public class SoundManager : Singleton<SoundManager>
         audioSource.Play();
     }
 
-    public static void PlaySoundShot()
+    public void PlaySoundShot(AudioClip clip)
     {
+        audioSource.PlayOneShot(clip, MainSoundValue * SoundEffectValue);
 
     }
 
 
     private void Update()
     {
-        audioSource.volume = mainSoundValue;
+        audioSource.volume = MainSoundValue;
     }
 
 

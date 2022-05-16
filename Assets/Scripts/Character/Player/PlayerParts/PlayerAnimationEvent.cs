@@ -14,4 +14,9 @@ public class PlayerAnimationEvent : PlayerParts<PlayerAnimationEvent>
     {
         player.PlayerRevive();
     }
+
+    public void PlaySound(AudioClip clip)
+    {
+        SoundManager.Instance.PlaySoundShot(clip);
+    }
 }

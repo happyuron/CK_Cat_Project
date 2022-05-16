@@ -21,8 +21,8 @@ public class SettingUi : MonoBehaviour
 
         closeButton.onClick.AddListener(() => UiManager.Instance.HideSetMenu());
         UiManager.Instance.HideSetMenu();
-        mainSound.onValueChanged.AddListener(_ => SoundManager.Instance.mainSoundValue = mainSound.value);
-        soundEffectSound.onValueChanged.AddListener(_ => SoundManager.Instance.soundEffectValue = soundEffectSound.value);
+        mainSound.onValueChanged.AddListener(_ => SoundManager.Instance.MainSoundValue = mainSound.value);
+        soundEffectSound.onValueChanged.AddListener(_ => SoundManager.Instance.SoundEffectValue = soundEffectSound.value);
 
     }
 
