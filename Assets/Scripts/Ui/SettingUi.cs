@@ -11,6 +11,10 @@ public class SettingUi : MonoBehaviour
     public Image background;
 
     public Slider mainSound;
+
+    public Slider soundEffectSound;
+
+
     private void Start()
     {
         UiManager.Instance.settingButton = settingButton;
@@ -18,7 +22,8 @@ public class SettingUi : MonoBehaviour
 
         closeButton.onClick.AddListener(() => UiManager.Instance.HideSetMenu());
         UiManager.Instance.HideSetMenu();
-        // mainSound.onValueChanged.AddListener(()=>);
+        mainSound.onValueChanged.AddListener(_ => SoundManager.Instance.mainSoundValue = mainSound.value);
+        soundEffectSound.onValueChanged.AddListener(_ => SoundManager.Instance.soundEffectValue = soundEffectSound.value);
 
     }
 

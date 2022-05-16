@@ -10,7 +10,9 @@ public class StageManager : Singleton<StageManager>
 
     public StartPosition[] SavePoint { get; private set; }
 
-    public AudioClip clip;
+    public AudioClip mainBGM;
+
+
     public bool showSettingButton = true;
     public int NextSceneIndex;
 

@@ -2,17 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : Singleton<SoundManager>
 {
-    // Start is called before the first frame update
-    void Start()
+    public AudioSource audioSource;
+    public float mainSoundValue { get; set; }
+
+    public float soundEffectValue { get; set; }
+
+
+    protected override void Awake()
     {
-        
+        base.Awake();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public static void PlaySoundShot()
     {
-        
+
     }
+
+
+    private void Update()
+    {
+        audioSource.volume = mainSoundValue;
+    }
+
+
 }

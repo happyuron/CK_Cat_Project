@@ -10,10 +10,9 @@ public class LoadingScene : MonoBehaviour
 {
     [SerializeField] private Image background;
 
-    [SerializeField] private Image loadingBar;
-
-    [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private CanvasGroup canvasGroup;
+
+    private RectTransform rectTr;
 
     private int index;
 
@@ -21,67 +20,52 @@ public class LoadingScene : MonoBehaviour
     private void Awake()
     {
         gameObject.SetActive(false);
+        rectTr = background.rectTransform;
     }
 
 
     public void LoadScene(int sceneIndex)
     {
-        gameObject.SetActive(true);
         index = sceneIndex;
-        StartCoroutine(Fade(true));
-        //var t = LoadSceneProcess();
+        gameObject.SetActive(true);
+        StartCoroutine(HorizontalMove(0));
     }
 
-    private IEnumerator LoadingSceneProcess()
+    public IEnumerator HorizontalMove(int value)
     {
         yield return null;
-        loadingBar.fillAmount = 0;
+        float setX = value == 1 ? -1920 : 1920;
+        float dirX = value == 1 ? 1920 : -1920;
+        rectTr.localPosition = new Vector3(setX, 0, 0);
+        Vector2 dirVec = new Vector2(dirX, 0);
 
-        AsyncOperation op = SceneManager.LoadSceneAsync(index);
-        op.allowSceneActivation = false;
-        while (!op.isDone)
+
+        while (true)
         {
             yield return null;
-            loadingBar.fillAmount = op.progress;
-            text.text = ShowPercentage(op.progress);
-            if (op.progress >= 0.9f)
+            rectTr.localPosition = Vector2.MoveTowards(rectTr.localPosition, dirVec, 50);
+            if (Vector2.Distance(rectTr.localPosition, new Vector2(0, 0)) < 50)
             {
-                op.allowSceneActivation = true;
-                StartCoroutine(Fade(false));
-                UiManager.Instance.HideSetMenu();
+                AsyncOperation op = SceneManager.LoadSceneAsync(index);
+                op.allowSceneActivation = false;
+                while (!op.isDone)
+                {
+                    yield return null;
+                    if (op.progress >= 0.9f)
+                    {
+                        op.allowSceneActivation = true;
+                        UiManager.Instance.HideSetMenu();
+                    }
+                }
+
+            }
+            if (Vector2.Distance(rectTr.localPosition, dirVec) < 10)
+            {
+                gameObject.SetActive(false);
+                break;
             }
         }
-    }
 
-
-    private IEnumerator Fade(bool value)
-    {
-        yield return null;
-        float timer = value ? 1 : 0;
-        float start = value ? 0 : 1;
-        float end = value ? 1 : 0;
-        while (timer <= 1)
-        {
-            yield return null;
-            timer += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Lerp(start, end, timer);
-        }
-        if (!value)
-        {
-            gameObject.SetActive(false);
-            loadingBar.fillAmount = 0;
-            text.text = null;
-        }
-        else
-        {
-            StartCoroutine(LoadingSceneProcess());
-        }
     }
-    private string ShowPercentage(float value)
-    {
-        string tmp = (100 * value).ToString() + "%";
-        return tmp;
-    }
-
 
 }
