@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Collections;
 public class SceneLoader : Singleton<SceneLoader>
 {
 
@@ -14,6 +14,6 @@ public class SceneLoader : Singleton<SceneLoader>
     public void LoadScene(int sceneIndex)
     {
         sceneLoad.LoadScene(sceneIndex);
-        SceneManager.LoadScene(sceneIndex);
+        
     }
 }

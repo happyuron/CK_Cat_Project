@@ -28,11 +28,11 @@ public class LoadingScene : MonoBehaviour
     {
         gameObject.SetActive(true);
         index = sceneIndex;
-        FadeInOut(true);
-        var task = Task.Run(() => LoadingSceneProcess());
-        task.Start();
+        StartCoroutine(Fade(true));
+        //var t = LoadSceneProcess();
     }
-    private void LoadingSceneProcess()
+
+    private IEnumerator LoadingSceneProcess()
     {
         loadingBar.fillAmount = 0;
 
@@ -40,48 +40,46 @@ public class LoadingScene : MonoBehaviour
         op.allowSceneActivation = false;
         while (!op.isDone)
         {
+            yield return null;
             loadingBar.fillAmount = op.progress;
             text.text = ShowPercentage(op.progress);
-            if (op.progress > 0.9f)
+            if (op.progress >= 0.9f)
             {
-                StartCoroutine(Fade(true));
+                op.allowSceneActivation = true;
+                StartCoroutine(Fade(false));
             }
         }
     }
 
+
     private IEnumerator Fade(bool value)
     {
         yield return null;
-        float timer = 0;
+        float timer = value ? 1 : 0;
         float start = value ? 0 : 1;
-        float goal = value ? 1 : 0;
+        float end = value ? 1 : 0;
         while (timer <= 1)
         {
-            timer += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Lerp(start, goal, timer);
             yield return null;
+            timer += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(start, end, timer);
         }
         if (!value)
         {
             gameObject.SetActive(false);
+            loadingBar.fillAmount = 0;
+            text.text = null;
         }
-    }
-
-    private void FadeInOut(bool value)
-    {
-        float timer = 0;
-        float start = value ? 0 : 1;
-        float goal = value ? 1 : 0;
-        while (timer <= 1)
+        else
         {
-            timer += Time.deltaTime;
-            canvasGroup.alpha = Mathf.Lerp(start, goal, timer);
+            StartCoroutine(LoadingSceneProcess());
         }
     }
     private string ShowPercentage(float value)
     {
-        string tmp = value.ToString() + "%";
+        string tmp = (100 * value).ToString() + "%";
         return tmp;
     }
+
 
 }

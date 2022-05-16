@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -34,9 +35,7 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitForSeconds(goal.WaitSecond);
         if (goal.CheckObject<Player, Pivot>())
         {
-            Time.timeScale = 0;
             SceneLoader.Instance.LoadScene(StageManager.Instance.NextSceneIndex);
-            Time.timeScale = 1;
         }
     }
 
