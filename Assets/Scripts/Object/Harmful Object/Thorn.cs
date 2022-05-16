@@ -12,17 +12,13 @@ public class Thorn : EveryObject
         if (target != null && StageManager.Instance.IsPlayer(target))
         {
             Player player = target.GetComponent<Player>() ?? target.GetComponentInParent<Player>();
-            StartCoroutine(PlayerDead(player));
+            PlayerDead(player);
         }
     }
 
-    private IEnumerator PlayerDead(Player player)
+    private void PlayerDead(Player player)
     {
         player.PlayerDead();
-        yield return new WaitForSeconds(1.0f);
-        player.PlayerRevive();
-        StageManager.Instance.LoadPlayer(target);
-        StopAllCoroutines();
     }
 
 

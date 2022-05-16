@@ -21,8 +21,8 @@ public class Player : Character
     [SerializeField] public bool isAllowed => !isJumping && !isMoving;
     public PlayerState CurState { get; set; }
 
-    public static string eyeAnimValueName = "PlayerWater";
-    public static string animValueName = "Player";
+    public string eyeAnimValueName = "PlayerWater";
+    public string animValueName = "Player";
 
     public Animator eyeAnim;
 
@@ -105,6 +105,8 @@ public class Player : Character
         CurState = PlayerState.Idle;
         MakeEnable(CurState);
         IsDead = false;
+        StageManager.Instance.LoadPlayer(this);
+        AnimationController.SetIntegerAnimation(anim, animValueName, (int)PlayerState.Idle);
     }
 
     private void MakeEnable(PlayerState state)

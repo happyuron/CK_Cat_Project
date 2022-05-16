@@ -26,6 +26,12 @@ public class PlayerMove : PlayerParts<PlayerMove>
         if (player.IsNormalState())
         {
             isMoving = value.x != 0 ? true : false;
+            if (isMoving && !isJumping)
+                AnimationController.SetIntegerAnimation(anim, player.animValueName, (int)PlayerState.Walk);
+            else if (!isMoving && !isJumping)
+                AnimationController.SetIntegerAnimation(anim, player.animValueName, (int)PlayerState.Idle);
+
+
             player.DirX = value.x * moveSpeed;
             if (dirX > 0)
                 spriteRenderer.flipX = false;
@@ -39,6 +45,7 @@ public class PlayerMove : PlayerParts<PlayerMove>
     {
         if (player.IsNormalState() && !isJumping)
         {
+            AnimationController.SetIntegerAnimation(player.anim, player.animValueName, (int)PlayerState.Jump);
             Rigid2D.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             isJumping = true;
         }
@@ -49,7 +56,10 @@ public class PlayerMove : PlayerParts<PlayerMove>
         if (player.Rigid2D.velocity.y <= 0 && GroundCheck())
         {
             if (isJumping)
+            {
                 isJumping = false;
+                AnimationController.SetIntegerAnimation(player.anim, player.animValueName, (int)PlayerState.Idle);
+            }
             if (!isMoving && player.isChangedRight)
             {
                 player.isChangedRight = false;
