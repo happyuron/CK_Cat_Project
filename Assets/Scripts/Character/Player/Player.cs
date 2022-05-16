@@ -22,7 +22,7 @@ public class Player : Character
     public PlayerState CurState { get; set; }
 
     public static string eyeAnimValueName = "PlayerWater";
-    public static string animValueName = "";
+    public static string animValueName = "Player";
 
     public Animator eyeAnim;
 

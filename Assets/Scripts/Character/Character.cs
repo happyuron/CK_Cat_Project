@@ -19,7 +19,7 @@ public enum CharacterAnim
 public class Character : EveryObject
 {
     public Rigidbody2D Rigid2D { get; protected set; }
-    protected Animator anim;
+    public Animator anim;
 
     private bool isDead;
 
@@ -37,6 +37,5 @@ public class Character : EveryObject
     {
         base.Awake();
         Rigid2D = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
 }

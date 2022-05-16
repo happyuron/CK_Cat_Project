@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 829156852006342343}
   - component: {fileID: 7500129938837382458}
   m_Layer: 0
-  m_Name: Square
+  m_Name: EyeAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2687,8 +2687,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6626018640867637069}
   - component: {fileID: 6626018640867637056}
+  - component: {fileID: 2764403845656291180}
   m_Layer: 6
-  m_Name: Square
+  m_Name: Anim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2761,6 +2762,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2764403845656291180
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6626018640867637068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35bc2a41b8eae2143a4a77c339e1a7e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6626018642516644505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,7 +2796,6 @@ GameObject:
   - component: {fileID: 6626018641596283156}
   - component: {fileID: 6626018641596283114}
   - component: {fileID: 6626018641596283113}
-  - component: {fileID: 1601378920936358785}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -2908,11 +2928,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946863ebd4f222d43b03281b0befb6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 2764403845656291180}
   normal: {fileID: 6626018640867637068}
   water: {fileID: 4734106745970850647}
   <JumpPower>k__BackingField: 5
   <MoveSpeed>k__BackingField: 0
-  eyeAnimator: {fileID: 0}
+  eyeAnim: {fileID: 7500129938837382458}
   isChangedRight: 0
 --- !u!50 &6626018641596283114
 Rigidbody2D:
@@ -2961,23 +2982,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!95 &1601378920936358785
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6626018642516644505}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
