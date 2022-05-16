@@ -12,12 +12,14 @@ public class Character : EveryObject
     public Rigidbody2D Rigid2D { get; protected set; }
     protected Animator anim;
 
+    private bool isDead;
+
     public bool IsDead
     {
-        get { return IsDead; }
+        get { return isDead; }
         set
         {
-            IsDead = value;
+            isDead = value;
             // if (anim != null)
             //     anim.SetInteger("", (int)CharacterAnim.Dead);
         }

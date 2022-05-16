@@ -34,6 +34,7 @@ public class LoadingScene : MonoBehaviour
 
     private IEnumerator LoadingSceneProcess()
     {
+        yield return null;
         loadingBar.fillAmount = 0;
 
         AsyncOperation op = SceneManager.LoadSceneAsync(index);

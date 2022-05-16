@@ -14,12 +14,12 @@ public class GameManager : Singleton<GameManager>
         get { return gravityDirection; }
         set
         {
-            gravityDirection = GravityController.Instance.GetGravity();
+            gravityDirection = value;
             if (player.CurState == PlayerState.Water)
             {
                 ApplyGravityToObj<ObjByPlayer>();
             }
-            else if (player.CurState == PlayerState.Normal)
+            else if (player.IsNormalState())
             {
                 ApplyGravityToObj<ObjByEffect>();
             }

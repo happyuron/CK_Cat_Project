@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum PlayerState
 {
-    Normal, Water
+    Idle, Water, Walk, Jump, Dead
 }
 
 public class PlayerStateManager : Singleton<PlayerStateManager>

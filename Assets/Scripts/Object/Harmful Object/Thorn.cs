@@ -2,25 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Thorn : TriggerObject
+public class Thorn : EveryObject
 {
     private EveryObject target;
-    protected override void OnCheckStart()
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        target = CheckObject<Player>();
-        target = CheckObject<Pivot>() ?? target;
-        if (target != null)
+        target = other.gameObject.GetComponent<EveryObject>();
+        if (target != null && StageManager.Instance.IsPlayer(target))
         {
-            //GameManager.Instance.player.IsDead = true;
-            StartCoroutine(PlayerDead());
+            Player player = target.GetComponent<Player>() ?? target.GetComponentInParent<Player>();
+            StartCoroutine(PlayerDead(player));
         }
     }
 
-    private IEnumerator PlayerDead()
+    private IEnumerator PlayerDead(Player player)
     {
-
+        player.PlayerDead();
         yield return new WaitForSeconds(1.0f);
-        StageManager.Instance.LoadPlayerPos(target);
+        player.PlayerRevive();
+        StageManager.Instance.LoadPlayer(target);
         StopAllCoroutines();
     }
 

@@ -37,7 +37,7 @@ public class Player : Character
         collision = GetComponent<Collider2D>();
         pivotList = GetComponentsInChildren<Pivot>();
         born = GetComponentInChildren<SpriteSkin>().rootBone.transform;
-        CurState = PlayerState.Normal;
+        CurState = PlayerState.Idle;
     }
 
     private void Start()
@@ -51,7 +51,7 @@ public class Player : Character
         {
             ChangeToNormal();
         }
-        else if (CurState == PlayerState.Normal && isAllowed)
+        else if (IsNormalState() && isAllowed)
         {
             ChangeToWater();
         }
@@ -71,7 +71,7 @@ public class Player : Character
 
     protected void ChangeToNormal()
     {
-        CurState = PlayerState.Normal;
+        CurState = PlayerState.Idle;
         DirX = born.GetComponent<Rigidbody2D>().velocity.x;
         Rigid2D.velocity = born.GetComponent<Rigidbody2D>().velocity;
         MakeEnable(CurState);
@@ -84,29 +84,43 @@ public class Player : Character
         }
     }
 
+    public void PlayerDead()
+    {
+        CurState = PlayerState.Dead;
+        IsDead = true;
+        DirX = 0;
+    }
+    public void PlayerRevive()
+    {
+        CurState = PlayerState.Idle;
+        MakeEnable(CurState);
+        IsDead = false;
+    }
 
     private void MakeEnable(PlayerState state)
     {
-        if (state == PlayerState.Normal)
+        if (IsNormalState())
         {
             normal.SetActive(true);
             water.SetActive(false);
             collision.enabled = true;
             isChangedRight = true;
+            Rigid2D.gravityScale = 1;
+
         }
         else if (state == PlayerState.Water)
         {
             normal.SetActive(false);
             water.SetActive(true);
             collision.enabled = false;
+            Rigid2D.gravityScale = 0;
 
         }
     }
 
     public bool IsNormalState()
     {
-
-        return CurState == PlayerState.Normal ? true : false;
+        return CurState == PlayerState.Idle || CurState == PlayerState.Walk || CurState == PlayerState.Jump ? true : false;
 
     }
 

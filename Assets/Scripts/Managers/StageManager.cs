@@ -41,18 +41,26 @@ public class StageManager : Singleton<StageManager>
             obj.Tr.position = StartPos;
         }
     }
-    public void LoadPlayerPos(EveryObject obj)
+    public bool IsPlayer(EveryObject obj)
     {
         Player player = obj.GetComponent<Player>() ?? obj.GetComponentInParent<Player>();
+        if (player == null)
+            return false;
+        return true;
+    }
+    public void LoadPlayer(EveryObject obj)
+    {
+        Player player = obj.GetComponent<Player>() ?? obj.GetComponentInParent<Player>();
+
         player.Rigid2D.velocity = Vector2.zero;
-        if (!player.IsNormalState())
+        if (player.CurState == PlayerState.Water)
         {
             player.ChangeState();
             player.Rigid2D.velocity = Vector2.zero;
             player.Tr.position = StartPos;
             player.ChangeState();
         }
-        else
+        else if (player.IsNormalState())
         {
             player.Tr.position = StartPos;
         }

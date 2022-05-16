@@ -55,8 +55,11 @@ public class InputManager : Singleton<InputManager>
 
     private void Update()
     {
-        ControllerButtonDown();
-        ControllerButtonUp();
+        if (player.CurState == PlayerState.Water)
+        {
+            ControllerButtonDown();
+            ControllerButtonUp();
+        }
     }
     public void ControllerButtonDown()
     {
@@ -72,7 +75,7 @@ public class InputManager : Singleton<InputManager>
             }
             if (results.Count == 0)
             {
-                controller.Raycast(pos, results);
+                Debug.Log("Set");
                 GravityController.Instance.SetGravity(0, pos.position);
             }
             else
@@ -93,7 +96,6 @@ public class InputManager : Singleton<InputManager>
             }
             if (results.Count == 0 && set)
             {
-                controller.Raycast(pos, results);
                 GravityController.Instance.SetGravity(1, pos.position);
             }
             set = true;
