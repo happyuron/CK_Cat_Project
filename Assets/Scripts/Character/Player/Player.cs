@@ -21,6 +21,10 @@ public class Player : Character
     [SerializeField] public bool isAllowed => !isJumping && !isMoving;
     public PlayerState CurState { get; set; }
 
+    public static string eyeAnimValueName = "PlayerWater";
+    public static string animValueName = "";
+
+    public Animator eyeAnim;
 
     public float DirX { get; set; }
     public bool isChangedRight;
@@ -33,6 +37,7 @@ public class Player : Character
     protected override void Awake()
     {
         base.Awake();
+        eyeAnim = GetComponentInChildren<Animator>();
         move = GetComponent<PlayerMove>();
         collision = GetComponent<Collider2D>();
         pivotList = GetComponentsInChildren<Pivot>();
@@ -86,6 +91,11 @@ public class Player : Character
 
     public void PlayerDead()
     {
+        if (!IsNormalState())
+            AnimationController.SetIntegerAnimation(eyeAnim, eyeAnimValueName, (int)PlayerState.Dead);
+        else
+            AnimationController.SetIntegerAnimation(anim, animValueName, (int)PlayerState.Dead);
+
         CurState = PlayerState.Dead;
         IsDead = true;
         DirX = 0;

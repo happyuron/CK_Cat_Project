@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public static class AnimationController
+{
+    public static void SetIntegerAnimation(Animator anim, string name, int index)
+    {
+        anim.SetInteger(name, index);
+    }
+}
+
 public enum CharacterAnim
 {
     Idle, Move, Jump, Dead
@@ -28,6 +37,6 @@ public class Character : EveryObject
     {
         base.Awake();
         Rigid2D = GetComponent<Rigidbody2D>();
-        anim = GetComponentInChildren<Animator>();
+        anim = GetComponent<Animator>();
     }
 }
