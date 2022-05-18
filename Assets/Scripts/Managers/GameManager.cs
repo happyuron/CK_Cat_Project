@@ -36,6 +36,7 @@ public class GameManager : Singleton<GameManager>
         if (goal.CheckObject<Player, Pivot>())
         {
             SceneLoader.Instance.LoadScene(StageManager.Instance.NextSceneIndex);
+            SoundManager.Instance.PlaySoundShot("GameClear");
         }
     }
 

@@ -46,6 +46,7 @@ public class PlayerMove : PlayerParts<PlayerMove>
         if (player.IsNormalState() && !isJumping)
         {
             AnimationController.SetIntegerAnimation(player.anim, player.animValueName, (int)PlayerState.Jump);
+            SoundManager.Instance.PlaySoundShot("JumpSound");
             Rigid2D.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             isJumping = true;
         }
