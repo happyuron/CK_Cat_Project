@@ -48,7 +48,7 @@ public class Pipe : EveryObject
         }
         else if (CheckDistance())
         {
-            targetTr.position = exit.transform.position;
+            targetTr.position = exit.bounds.center;
         }
     }
 }
