@@ -8,7 +8,6 @@ public class StageManager : Singleton<StageManager>
 {
     public Vector2 StartPos { get; private set; }
 
-    public StartPosition[] SavePoint { get; private set; }
 
     public AudioClip mainBGM;
 
@@ -19,8 +18,11 @@ public class StageManager : Singleton<StageManager>
 
     private void Start()
     {
-        SoundManager.Instance.audioSource.clip = mainBGM;
-        SoundManager.Instance.PlayMainSound();
+        if (SoundManager.Instance.GetAudioClip() != mainBGM)
+        {
+            SoundManager.Instance.audioSource.clip = mainBGM;
+            SoundManager.Instance.PlayMainSound();
+        }
     }
 
     public void SavePos(Transform tr)
