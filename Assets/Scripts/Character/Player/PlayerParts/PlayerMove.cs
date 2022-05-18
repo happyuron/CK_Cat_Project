@@ -10,7 +10,9 @@ public class PlayerMove : PlayerParts<PlayerMove>
     private SpriteRenderer spriteRenderer;
     private float moveSpeed => player.MoveSpeed;
     [SerializeField] private LayerMask hitLayer;
-    [SerializeField] private float groundCheckDistance;
+    [SerializeField] private Vector3 offset;
+    [SerializeField] private Vector3 size;
+
 
     public bool isJumping;
     public bool isMoving;
@@ -71,13 +73,11 @@ public class PlayerMove : PlayerParts<PlayerMove>
         }
     }
 
-    private bool GroundCheck()
+    public virtual bool GroundCheck()
     {
-        if (Physics2D.Raycast(Tr.position, Vector2.down, groundCheckDistance, hitLayer))
-            return true;
-        return false;
+        Collider2D tmp = Physics2D.OverlapBox(Tr.position + offset, size, 0, hitLayer);
+        return tmp;
     }
-
     private void LateUpdate()
     {
         FallingCheck();
@@ -87,6 +87,6 @@ public class PlayerMove : PlayerParts<PlayerMove>
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, transform.position + groundCheckDistance * Vector3.down);
+        Gizmos.DrawWireCube(transform.position + offset, size);
     }
 }

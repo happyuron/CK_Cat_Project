@@ -75,17 +75,12 @@ public class Player : Character
 
     protected void ChangeToNormal()
     {
+        GameManager.Instance.DefaultGravityToObj<ObjByPlayer>();
         CurState = PlayerState.Idle;
         DirX = born.GetComponent<Rigidbody2D>().velocity.x;
         Rigid2D.velocity = born.GetComponent<Rigidbody2D>().velocity;
         MakeEnable(CurState);
-        GameManager.Instance.DefaultGravityToObj<ObjByPlayer>();
         Tr.position = born.transform.position;
-        Rigid2D.gravityScale = 1;
-        for (int i = 0; i < pivotList.Length; i++)
-        {
-            pivotList[i].ResetPos();
-        }
     }
 
     public void PlayerDead()
@@ -102,6 +97,7 @@ public class Player : Character
     }
     public void PlayerRevive()
     {
+        GameManager.Instance.DefaultGravityToObj<ObjByPlayer>();
         CurState = PlayerState.Idle;
         MakeEnable(CurState);
         IsDead = false;
