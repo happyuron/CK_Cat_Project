@@ -85,15 +85,18 @@ public class Player : Character
 
     public void PlayerDead()
     {
-        if (!IsNormalState())
-            AnimationController.SetIntegerAnimation(eyeAnim, eyeAnimValueName, (int)PlayerState.Dead);
-        else
-            AnimationController.SetIntegerAnimation(anim, animValueName, (int)PlayerState.Dead);
-        SoundManager.Instance.PlaySoundShot("CatDeadSound");
+        if (CurState != PlayerState.Dead)
+        {
+            if (!IsNormalState())
+                AnimationController.SetIntegerAnimation(eyeAnim, eyeAnimValueName, (int)PlayerState.Dead);
+            else
+                AnimationController.SetIntegerAnimation(anim, animValueName, (int)PlayerState.Dead);
+            SoundManager.Instance.PlaySoundShot("CatDeadSound");
 
-        CurState = PlayerState.Dead;
-        IsDead = true;
-        DirX = 0;
+            CurState = PlayerState.Dead;
+            IsDead = true;
+            DirX = 0;
+        }
     }
     public void PlayerRevive()
     {

@@ -61,7 +61,11 @@ public class PlayerMove : PlayerParts<PlayerMove>
             if (isJumping)
             {
                 isJumping = false;
-                AnimationController.SetIntegerAnimation(player.anim, player.animValueName, (int)PlayerState.Idle);
+                if (!isMoving)
+                    AnimationController.SetIntegerAnimation(player.anim, player.animValueName, (int)PlayerState.Idle);
+                else
+                    AnimationController.SetIntegerAnimation(player.anim, player.animValueName, (int)PlayerState.Walk);
+
             }
             if (!isMoving && player.isChangedRight)
             {
@@ -77,6 +81,10 @@ public class PlayerMove : PlayerParts<PlayerMove>
     {
         Collider2D tmp = Physics2D.OverlapBox(Tr.position + offset, size, 0, hitLayer);
         return tmp;
+    }
+    private void Update()
+    {
+
     }
     private void LateUpdate()
     {
