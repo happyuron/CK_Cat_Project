@@ -28,6 +28,7 @@ public class Pipe : EveryObject
 
         return false;
     }
+
     private bool IsPlayer()
     {
         if (targetTr.gameObject.layer == LayerMask.NameToLayer("Pivot"))
@@ -41,7 +42,7 @@ public class Pipe : EveryObject
         if (CheckDistance() && IsPlayer())
         {
             player.ChangeState();
-            player.Tr.position = exit.transform.position;
+            player.Tr.position = exit.bounds.center;
             player.Rigid2D.velocity = Vector2.zero;
             player.ChangeState();
         }
@@ -50,6 +51,4 @@ public class Pipe : EveryObject
             targetTr.position = exit.transform.position;
         }
     }
-
-
 }
