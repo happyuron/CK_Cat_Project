@@ -36,7 +36,6 @@ public class Pipe : EveryObject
         return false;
     }
 
-
     private void FixedUpdate()
     {
         if (CheckDistance() && IsPlayer())
