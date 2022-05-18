@@ -1238,6 +1238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 0
+  clipList: []
   audioSource: {fileID: 0}
 --- !u!82 &3865289106990775117
 AudioSource:
@@ -1451,7 +1452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 4016416446481457060}
-  canvasGroup: {fileID: 4016416445320767810}
 --- !u!225 &4016416445320767810
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1460,7 +1460,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4016416445320767808}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

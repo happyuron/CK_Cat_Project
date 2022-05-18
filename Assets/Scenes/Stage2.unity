@@ -5828,6 +5828,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1016598990057088895, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016598990057088895, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 3642770037497351346, guid: 47a3746917bb02e4dbe4a56baa619e79, type: 3}
       propertyPath: size.x
       value: 1
