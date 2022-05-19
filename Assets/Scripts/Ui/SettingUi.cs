@@ -14,6 +14,10 @@ public class SettingUi : MonoBehaviour
 
     public Slider soundEffectSound;
 
+    public Button toMenu;
+
+    public Button quitGame;
+
 
     private void Start()
     {
@@ -23,10 +27,12 @@ public class SettingUi : MonoBehaviour
         UiManager.Instance.HideSetMenu();
         mainSound.onValueChanged.AddListener(_ => SoundManager.Instance.MainSoundValue = mainSound.value);
         soundEffectSound.onValueChanged.AddListener(_ => SoundManager.Instance.SoundEffectValue = soundEffectSound.value);
+        toMenu.onClick.AddListener(() => SceneLoader.Instance.LoadScene(0));
+        quitGame.onClick.AddListener(() => Application.Quit());
 
     }
 
-    
+
 
 
 }

@@ -92,6 +92,7 @@ public class Player : Character
             else
                 AnimationController.SetIntegerAnimation(anim, animValueName, (int)PlayerState.Dead);
             SoundManager.Instance.PlaySoundShot("CatDeadSound");
+            GameManager.Instance.PlayDeadParticle();
             CurState = PlayerState.Dead;
             IsDead = true;
             DirX = 0;
