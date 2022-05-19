@@ -10,6 +10,9 @@ public class GameManager : Singleton<GameManager>
     public Player player;
     public bool gameClear = false;
 
+    private GameObject deadParticleCNG;
+    private ParticleSystem deadParticle;
+
     public Vector2 GravityDirection
     {
         get { return gravityDirection; }
@@ -26,6 +29,26 @@ public class GameManager : Singleton<GameManager>
             }
         }
     }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        deadParticleCNG = Resources.Load<GameObject>("Prefebs/Particle");
+        deadParticle = Instantiate(deadParticleCNG, transform).gameObject.GetComponent<ParticleSystem>();
+    }
+
+    public void PlayDeadParticle()
+    {
+        if (player.IsNormalState())
+            deadParticle.transform.position = player.Tr.position;
+        else
+        {
+            deadParticle.transform.position = player.born.position;
+        }
+        deadParticle.Play();
+    }
+
+
     public void ClearGame(Goal goal)
     {
         if (StageManager.Instance.NextSceneIndex != 0)
@@ -78,6 +101,7 @@ public class GameManager : Singleton<GameManager>
             }
         }
     }
+
 
 
 }
