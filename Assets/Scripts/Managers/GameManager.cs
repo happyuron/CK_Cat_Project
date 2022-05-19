@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
     public float gravity;
     private Vector2 gravityDirection;
     public Player player;
+    public bool gameClear = false;
 
     public Vector2 GravityDirection
     {
@@ -35,6 +36,7 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitForSeconds(goal.WaitSecond);
         if (goal.CheckObject<Player, Pivot>())
         {
+            GameManager.Instance.gameClear = true;
             SceneLoader.Instance.LoadScene(StageManager.Instance.NextSceneIndex);
             SoundManager.Instance.PlaySoundShot("GameClear");
         }

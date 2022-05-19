@@ -85,7 +85,7 @@ public class Player : Character
 
     public void PlayerDead()
     {
-        if (CurState != PlayerState.Dead)
+        if (CurState != PlayerState.Dead && !GameManager.Instance.gameClear)
         {
             if (!IsNormalState())
                 AnimationController.SetIntegerAnimation(eyeAnim, eyeAnimValueName, (int)PlayerState.Dead);
