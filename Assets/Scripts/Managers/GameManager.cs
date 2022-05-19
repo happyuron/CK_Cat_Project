@@ -28,7 +28,15 @@ public class GameManager : Singleton<GameManager>
     }
     public void ClearGame(Goal goal)
     {
-        StartCoroutine(GameEnd(goal));
+        if (StageManager.Instance.NextSceneIndex != 0)
+            StartCoroutine(GameEnd(goal));
+        else
+        {
+            gameClear = true;
+            UiManager.Instance.HideAllSetMenu();
+            UiManager.Instance.PopUpClearUi();
+
+        }
     }
 
     private IEnumerator GameEnd(Goal goal)
@@ -36,7 +44,7 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitForSeconds(goal.WaitSecond);
         if (goal.CheckObject<Player, Pivot>())
         {
-            GameManager.Instance.gameClear = true;
+            gameClear = true;
             SceneLoader.Instance.LoadScene(StageManager.Instance.NextSceneIndex);
         }
     }
