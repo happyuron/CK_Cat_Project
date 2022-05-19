@@ -26,9 +26,9 @@ public class Pivot : ObjByPlayer
     }
     public void SetUp()
     {
-        collder.enabled = true;
         Rigid2D.velocity = new Vector2(0, 0);
         Tr.localPosition = defaultPosition;
         Tr.rotation = dafalutAngle;
+        collder.enabled = true;
     }
 }
