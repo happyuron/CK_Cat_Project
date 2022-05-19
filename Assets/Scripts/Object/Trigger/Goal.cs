@@ -36,8 +36,11 @@ public class Goal : TriggerObject
 
     protected override void OnCheckStart(Collider2D collider)
     {
-        GameClear();
-        GameManager.Instance.ClearGame(this);
+        if (GameManager.Instance.player.CurState != PlayerState.Dead)
+        {
+            GameClear();
+            GameManager.Instance.ClearGame(this);
+        }
     }
     protected void Move()
     {
