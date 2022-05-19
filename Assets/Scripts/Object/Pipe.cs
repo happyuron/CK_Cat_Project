@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pipe : EveryObject
+public class Pipe : TriggerObject
 {
 
     [SerializeField] private Collider2D entrance;
@@ -29,25 +29,30 @@ public class Pipe : EveryObject
         return false;
     }
 
-    private bool IsPlayer()
+
+    private bool IsPivot()
     {
         if (targetTr.gameObject.layer == LayerMask.NameToLayer("Pivot"))
             return true;
         return false;
     }
-
-    private void FixedUpdate()
+    protected override void OnCheckStart(Collider2D tmp)
     {
-        if (CheckDistance() && IsPlayer())
+        if (IsPivot())
         {
             player.ChangeState();
             player.Tr.position = exit.bounds.center;
             player.Rigid2D.velocity = Vector2.zero;
             player.ChangeState();
         }
-        else if (CheckDistance())
+        else
         {
             targetTr.position = exit.bounds.center;
         }
+    }
+
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
     }
 }
