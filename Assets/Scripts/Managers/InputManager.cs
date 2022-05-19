@@ -75,7 +75,6 @@ public class InputManager : Singleton<InputManager>
             }
             if (results.Count == 0)
             {
-                Debug.Log("Set");
                 GravityController.Instance.SetGravity(0, pos.position);
             }
             else

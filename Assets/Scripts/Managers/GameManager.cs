@@ -38,7 +38,6 @@ public class GameManager : Singleton<GameManager>
         {
             GameManager.Instance.gameClear = true;
             SceneLoader.Instance.LoadScene(StageManager.Instance.NextSceneIndex);
-            SoundManager.Instance.PlaySoundShot("GameClear");
         }
     }
 

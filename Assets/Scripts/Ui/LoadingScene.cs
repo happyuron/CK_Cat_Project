@@ -41,9 +41,9 @@ public class LoadingScene : MonoBehaviour
         rectTr.localPosition = new Vector3(setX, 0, 0);
         Vector2 dirVec = Vector2.zero;
         bool isOnce = false;
-
         while (true)
         {
+            Debug.Log("Update");
             yield return null;
             rectTr.localPosition = Vector2.MoveTowards(rectTr.localPosition, dirVec, speed * Time.deltaTime);
             if (Vector2.Distance(rectTr.localPosition, Vector2.zero) <= 10 && !isOnce)

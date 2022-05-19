@@ -27,7 +27,11 @@ public class Goal : TriggerObject
 
     protected virtual void GameClear()
     {
-        spriteRenderer.enabled = false;
+        if (!GameManager.Instance.gameClear)
+        {
+            spriteRenderer.enabled = false;
+            SoundManager.Instance.PlaySoundShot("GameClear");
+        }
     }
 
     protected override void OnCheckStart(Collider2D collider)

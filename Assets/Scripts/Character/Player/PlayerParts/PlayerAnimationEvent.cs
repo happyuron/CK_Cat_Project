@@ -12,6 +12,7 @@ public class PlayerAnimationEvent : PlayerParts<PlayerAnimationEvent>
     }
     public void Revive()
     {
+        player.move.isMoving = false;
         player.PlayerRevive();
     }
 

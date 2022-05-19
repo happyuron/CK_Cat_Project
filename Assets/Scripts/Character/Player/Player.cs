@@ -7,7 +7,7 @@ public class Player : Character
     #region 변수들
     private Pivot[] pivotList;
 
-    private PlayerMove move;
+    public PlayerMove move;
 
     private Collider2D collision;
 
@@ -92,7 +92,6 @@ public class Player : Character
             else
                 AnimationController.SetIntegerAnimation(anim, animValueName, (int)PlayerState.Dead);
             SoundManager.Instance.PlaySoundShot("CatDeadSound");
-
             CurState = PlayerState.Dead;
             IsDead = true;
             DirX = 0;
